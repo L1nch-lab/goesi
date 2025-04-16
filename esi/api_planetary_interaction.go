@@ -55,18 +55,18 @@ Returns a list of all planetary colonies owned by a character.  ---  This route 
 */
 
 type GetCharactersCharacterIdPlanetsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanets(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdPlanetsOpts) ([]GetCharactersCharacterIdPlanets200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdPlanets200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdPlanets200OkList
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanets(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanets(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -244,17 +244,17 @@ Returns full details on the layout of a single planetary colony, including links
 */
 
 type GetCharactersCharacterIdPlanetsPlanetIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanetsPlanetId(ctx context.Context, characterId int32, planetId int32, localVarOptionals *GetCharactersCharacterIdPlanetsPlanetIdOpts) (GetCharactersCharacterIdPlanetsPlanetIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdPlanetsPlanetIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdPlanetsPlanetIdOk
 	)
 
 	// create path and map variables
@@ -302,7 +302,7 @@ func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanetsPlanetId
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -318,8 +318,8 @@ func (a *PlanetaryInteractionApiService) GetCharactersCharacterIdPlanetsPlanetId
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -442,19 +442,19 @@ List customs offices owned by a corporation  ---  This route is cached for up to
 */
 
 type GetCorporationsCorporationIdCustomsOfficesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *PlanetaryInteractionApiService) GetCorporationsCorporationIdCustomsOffices(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdCustomsOfficesOpts) ([]GetCorporationsCorporationIdCustomsOffices200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdCustomsOffices200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdCustomsOffices200OkList
 	)
 
 	// create path and map variables
@@ -507,7 +507,7 @@ func (a *PlanetaryInteractionApiService) GetCorporationsCorporationIdCustomsOffi
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -523,8 +523,8 @@ func (a *PlanetaryInteractionApiService) GetCorporationsCorporationIdCustomsOffi
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -634,17 +634,17 @@ Get information on a planetary factory schematic  ---  This route is cached for 
 */
 
 type GetUniverseSchematicsSchematicIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *PlanetaryInteractionApiService) GetUniverseSchematicsSchematicId(ctx context.Context, schematicId int32, localVarOptionals *GetUniverseSchematicsSchematicIdOpts) (GetUniverseSchematicsSchematicIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseSchematicsSchematicIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseSchematicsSchematicIdOk
 	)
 
 	// create path and map variables
@@ -688,7 +688,7 @@ func (a *PlanetaryInteractionApiService) GetUniverseSchematicsSchematicId(ctx co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -704,8 +704,8 @@ func (a *PlanetaryInteractionApiService) GetUniverseSchematicsSchematicId(ctx co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

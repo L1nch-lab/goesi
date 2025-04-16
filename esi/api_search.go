@@ -60,21 +60,21 @@ Search for entities that match a given sub-string.  ---  This route is cached fo
 */
 
 type GetCharactersCharacterIdSearchOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
-	Strict         optional.Bool
-	Token          optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
+	Strict		optional.Bool
+	Token		optional.String
 }
 
 func (a *SearchApiService) GetCharactersCharacterIdSearch(ctx context.Context, categories []string, characterId int32, search string, localVarOptionals *GetCharactersCharacterIdSearchOpts) (GetCharactersCharacterIdSearchOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdSearchOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdSearchOk
 	)
 
 	// create path and map variables
@@ -144,7 +144,7 @@ func (a *SearchApiService) GetCharactersCharacterIdSearch(ctx context.Context, c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -160,8 +160,8 @@ func (a *SearchApiService) GetCharactersCharacterIdSearch(ctx context.Context, c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

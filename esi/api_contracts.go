@@ -56,19 +56,19 @@ Returns contracts available to a character, only if the character is issuer, acc
 */
 
 type GetCharactersCharacterIdContractsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCharactersCharacterIdContracts(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdContractsOpts) ([]GetCharactersCharacterIdContracts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdContracts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdContracts200OkList
 	)
 
 	// create path and map variables
@@ -121,7 +121,7 @@ func (a *ContractsApiService) GetCharactersCharacterIdContracts(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -137,8 +137,8 @@ func (a *ContractsApiService) GetCharactersCharacterIdContracts(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -250,18 +250,18 @@ Lists bids on a particular auction contract  ---  This route is cached for up to
 */
 
 type GetCharactersCharacterIdContractsContractIdBidsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdBids(ctx context.Context, characterId int32, contractId int32, localVarOptionals *GetCharactersCharacterIdContractsContractIdBidsOpts) ([]GetCharactersCharacterIdContractsContractIdBids200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdContractsContractIdBids200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdContractsContractIdBids200OkList
 	)
 
 	// create path and map variables
@@ -312,7 +312,7 @@ func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdBids(ct
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -328,8 +328,8 @@ func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdBids(ct
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -452,18 +452,18 @@ Lists items of a particular contract  ---  This route is cached for up to 3600 s
 */
 
 type GetCharactersCharacterIdContractsContractIdItemsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdItems(ctx context.Context, characterId int32, contractId int32, localVarOptionals *GetCharactersCharacterIdContractsContractIdItemsOpts) ([]GetCharactersCharacterIdContractsContractIdItems200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdContractsContractIdItems200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdContractsContractIdItems200OkList
 	)
 
 	// create path and map variables
@@ -514,7 +514,7 @@ func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdItems(c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -530,8 +530,8 @@ func (a *ContractsApiService) GetCharactersCharacterIdContractsContractIdItems(c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -653,18 +653,18 @@ Lists bids on a public auction contract  ---  This route is cached for up to 300
 */
 
 type GetContractsPublicBidsContractIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *ContractsApiService) GetContractsPublicBidsContractId(ctx context.Context, contractId int32, localVarOptionals *GetContractsPublicBidsContractIdOpts) ([]GetContractsPublicBidsContractId200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetContractsPublicBidsContractId200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetContractsPublicBidsContractId200OkList
 	)
 
 	// create path and map variables
@@ -711,7 +711,7 @@ func (a *ContractsApiService) GetContractsPublicBidsContractId(ctx context.Conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -727,8 +727,8 @@ func (a *ContractsApiService) GetContractsPublicBidsContractId(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -839,18 +839,18 @@ Lists items of a public contract  ---  This route is cached for up to 3600 secon
 */
 
 type GetContractsPublicItemsContractIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *ContractsApiService) GetContractsPublicItemsContractId(ctx context.Context, contractId int32, localVarOptionals *GetContractsPublicItemsContractIdOpts) ([]GetContractsPublicItemsContractId200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetContractsPublicItemsContractId200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetContractsPublicItemsContractId200OkList
 	)
 
 	// create path and map variables
@@ -897,7 +897,7 @@ func (a *ContractsApiService) GetContractsPublicItemsContractId(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -913,8 +913,8 @@ func (a *ContractsApiService) GetContractsPublicItemsContractId(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1025,18 +1025,18 @@ Returns a paginated list of all public contracts in the given region  ---  This 
 */
 
 type GetContractsPublicRegionIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *ContractsApiService) GetContractsPublicRegionId(ctx context.Context, regionId int32, localVarOptionals *GetContractsPublicRegionIdOpts) ([]GetContractsPublicRegionId200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetContractsPublicRegionId200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetContractsPublicRegionId200OkList
 	)
 
 	// create path and map variables
@@ -1083,7 +1083,7 @@ func (a *ContractsApiService) GetContractsPublicRegionId(ctx context.Context, re
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1099,8 +1099,8 @@ func (a *ContractsApiService) GetContractsPublicRegionId(ctx context.Context, re
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1201,19 +1201,19 @@ Returns contracts available to a corporation, only if the corporation is issuer,
 */
 
 type GetCorporationsCorporationIdContractsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCorporationsCorporationIdContracts(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContractsOpts) ([]GetCorporationsCorporationIdContracts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContracts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContracts200OkList
 	)
 
 	// create path and map variables
@@ -1266,7 +1266,7 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContracts(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1282,8 +1282,8 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContracts(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1396,19 +1396,19 @@ Lists bids on a particular auction contract  ---  This route is cached for up to
 */
 
 type GetCorporationsCorporationIdContractsContractIdBidsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdBids(ctx context.Context, contractId int32, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContractsContractIdBidsOpts) ([]GetCorporationsCorporationIdContractsContractIdBids200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContractsContractIdBids200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContractsContractIdBids200OkList
 	)
 
 	// create path and map variables
@@ -1462,7 +1462,7 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdBid
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1478,8 +1478,8 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdBid
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1602,18 +1602,18 @@ Lists items of a particular contract  ---  This route is cached for up to 3600 s
 */
 
 type GetCorporationsCorporationIdContractsContractIdItemsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdItems(ctx context.Context, contractId int32, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContractsContractIdItemsOpts) ([]GetCorporationsCorporationIdContractsContractIdItems200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContractsContractIdItems200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContractsContractIdItems200OkList
 	)
 
 	// create path and map variables
@@ -1664,7 +1664,7 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdIte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1680,8 +1680,8 @@ func (a *ContractsApiService) GetCorporationsCorporationIdContractsContractIdIte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

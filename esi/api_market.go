@@ -55,18 +55,18 @@ List open market orders placed by a character  ---  This route is cached for up 
 */
 
 type GetCharactersCharacterIdOrdersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *MarketApiService) GetCharactersCharacterIdOrders(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdOrdersOpts) ([]GetCharactersCharacterIdOrders200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdOrders200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdOrders200OkList
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *MarketApiService) GetCharactersCharacterIdOrders(ctx context.Context, c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *MarketApiService) GetCharactersCharacterIdOrders(ctx context.Context, c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -245,19 +245,19 @@ List cancelled and expired market orders placed by a character up to 90 days in 
 */
 
 type GetCharactersCharacterIdOrdersHistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *MarketApiService) GetCharactersCharacterIdOrdersHistory(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdOrdersHistoryOpts) ([]GetCharactersCharacterIdOrdersHistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdOrdersHistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdOrdersHistory200OkList
 	)
 
 	// create path and map variables
@@ -310,7 +310,7 @@ func (a *MarketApiService) GetCharactersCharacterIdOrdersHistory(ctx context.Con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -326,8 +326,8 @@ func (a *MarketApiService) GetCharactersCharacterIdOrdersHistory(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -439,19 +439,19 @@ List open market orders placed on behalf of a corporation  ---  This route is ca
 */
 
 type GetCorporationsCorporationIdOrdersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *MarketApiService) GetCorporationsCorporationIdOrders(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdOrdersOpts) ([]GetCorporationsCorporationIdOrders200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdOrders200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdOrders200OkList
 	)
 
 	// create path and map variables
@@ -504,7 +504,7 @@ func (a *MarketApiService) GetCorporationsCorporationIdOrders(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -520,8 +520,8 @@ func (a *MarketApiService) GetCorporationsCorporationIdOrders(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -633,19 +633,19 @@ List cancelled and expired market orders placed on behalf of a corporation up to
 */
 
 type GetCorporationsCorporationIdOrdersHistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *MarketApiService) GetCorporationsCorporationIdOrdersHistory(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdOrdersHistoryOpts) ([]GetCorporationsCorporationIdOrdersHistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdOrdersHistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdOrdersHistory200OkList
 	)
 
 	// create path and map variables
@@ -698,7 +698,7 @@ func (a *MarketApiService) GetCorporationsCorporationIdOrdersHistory(ctx context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -714,8 +714,8 @@ func (a *MarketApiService) GetCorporationsCorporationIdOrdersHistory(ctx context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -824,17 +824,17 @@ Get a list of item groups  ---  This route expires daily at 11:05
 */
 
 type GetMarketsGroupsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *MarketApiService) GetMarketsGroups(ctx context.Context, localVarOptionals *GetMarketsGroupsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -877,7 +877,7 @@ func (a *MarketApiService) GetMarketsGroups(ctx context.Context, localVarOptiona
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -893,8 +893,8 @@ func (a *MarketApiService) GetMarketsGroups(ctx context.Context, localVarOptiona
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -984,19 +984,19 @@ Get information on an item group  ---  This route expires daily at 11:05
 */
 
 type GetMarketsGroupsMarketGroupIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *MarketApiService) GetMarketsGroupsMarketGroupId(ctx context.Context, marketGroupId int32, localVarOptionals *GetMarketsGroupsMarketGroupIdOpts) (GetMarketsGroupsMarketGroupIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetMarketsGroupsMarketGroupIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetMarketsGroupsMarketGroupIdOk
 	)
 
 	// create path and map variables
@@ -1046,7 +1046,7 @@ func (a *MarketApiService) GetMarketsGroupsMarketGroupId(ctx context.Context, ma
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1062,8 +1062,8 @@ func (a *MarketApiService) GetMarketsGroupsMarketGroupId(ctx context.Context, ma
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1161,17 +1161,17 @@ Return a list of prices  ---  This route is cached for up to 3600 seconds
 */
 
 type GetMarketsPricesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *MarketApiService) GetMarketsPrices(ctx context.Context, localVarOptionals *GetMarketsPricesOpts) ([]GetMarketsPrices200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetMarketsPrices200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetMarketsPrices200OkList
 	)
 
 	// create path and map variables
@@ -1214,7 +1214,7 @@ func (a *MarketApiService) GetMarketsPrices(ctx context.Context, localVarOptiona
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1230,8 +1230,8 @@ func (a *MarketApiService) GetMarketsPrices(ctx context.Context, localVarOptiona
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1320,17 +1320,17 @@ Return a list of historical market statistics for the specified type in a region
 */
 
 type GetMarketsRegionIdHistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *MarketApiService) GetMarketsRegionIdHistory(ctx context.Context, regionId int32, typeId int32, localVarOptionals *GetMarketsRegionIdHistoryOpts) ([]GetMarketsRegionIdHistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetMarketsRegionIdHistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetMarketsRegionIdHistory200OkList
 	)
 
 	// create path and map variables
@@ -1375,7 +1375,7 @@ func (a *MarketApiService) GetMarketsRegionIdHistory(ctx context.Context, region
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1391,8 +1391,8 @@ func (a *MarketApiService) GetMarketsRegionIdHistory(ctx context.Context, region
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1516,19 +1516,19 @@ Return a list of orders in a region  ---  This route is cached for up to 300 sec
 */
 
 type GetMarketsRegionIdOrdersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	TypeId      optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	TypeId		optional.Int32
 }
 
 func (a *MarketApiService) GetMarketsRegionIdOrders(ctx context.Context, orderType string, regionId int32, localVarOptionals *GetMarketsRegionIdOrdersOpts) ([]GetMarketsRegionIdOrders200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetMarketsRegionIdOrders200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetMarketsRegionIdOrders200OkList
 	)
 
 	// create path and map variables
@@ -1579,7 +1579,7 @@ func (a *MarketApiService) GetMarketsRegionIdOrders(ctx context.Context, orderTy
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1595,8 +1595,8 @@ func (a *MarketApiService) GetMarketsRegionIdOrders(ctx context.Context, orderTy
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1707,18 +1707,18 @@ Return a list of type IDs that have active orders in the region, for efficient m
 */
 
 type GetMarketsRegionIdTypesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *MarketApiService) GetMarketsRegionIdTypes(ctx context.Context, regionId int32, localVarOptionals *GetMarketsRegionIdTypesOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -1765,7 +1765,7 @@ func (a *MarketApiService) GetMarketsRegionIdTypes(ctx context.Context, regionId
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1781,8 +1781,8 @@ func (a *MarketApiService) GetMarketsRegionIdTypes(ctx context.Context, regionId
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1883,19 +1883,19 @@ Return all orders in a structure  ---  This route is cached for up to 300 second
 */
 
 type GetMarketsStructuresStructureIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *MarketApiService) GetMarketsStructuresStructureId(ctx context.Context, structureId int64, localVarOptionals *GetMarketsStructuresStructureIdOpts) ([]GetMarketsStructuresStructureId200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetMarketsStructuresStructureId200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetMarketsStructuresStructureId200OkList
 	)
 
 	// create path and map variables
@@ -1945,7 +1945,7 @@ func (a *MarketApiService) GetMarketsStructuresStructureId(ctx context.Context, 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1961,8 +1961,8 @@ func (a *MarketApiService) GetMarketsStructuresStructureId(ctx context.Context, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

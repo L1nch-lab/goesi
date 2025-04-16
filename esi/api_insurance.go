@@ -53,19 +53,19 @@ Return available insurance levels for all ship types  ---  This route is cached 
 */
 
 type GetInsurancePricesOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *InsuranceApiService) GetInsurancePrices(ctx context.Context, localVarOptionals *GetInsurancePricesOpts) ([]GetInsurancePrices200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetInsurancePrices200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetInsurancePrices200OkList
 	)
 
 	// create path and map variables
@@ -114,7 +114,7 @@ func (a *InsuranceApiService) GetInsurancePrices(ctx context.Context, localVarOp
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -130,8 +130,8 @@ func (a *InsuranceApiService) GetInsurancePrices(ctx context.Context, localVarOp
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

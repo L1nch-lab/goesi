@@ -55,16 +55,16 @@ Kick a fleet member  ---
 */
 
 type DeleteFleetsFleetIdMembersMemberIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) DeleteFleetsFleetIdMembersMemberId(ctx context.Context, fleetId int64, memberId int32, localVarOptionals *DeleteFleetsFleetIdMembersMemberIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -109,7 +109,7 @@ func (a *FleetsApiService) DeleteFleetsFleetIdMembersMemberId(ctx context.Contex
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -117,8 +117,8 @@ func (a *FleetsApiService) DeleteFleetsFleetIdMembersMemberId(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -229,16 +229,16 @@ Delete a fleet squad, only empty squads can be deleted  ---
 */
 
 type DeleteFleetsFleetIdSquadsSquadIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) DeleteFleetsFleetIdSquadsSquadId(ctx context.Context, fleetId int64, squadId int64, localVarOptionals *DeleteFleetsFleetIdSquadsSquadIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -283,7 +283,7 @@ func (a *FleetsApiService) DeleteFleetsFleetIdSquadsSquadId(ctx context.Context,
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -291,8 +291,8 @@ func (a *FleetsApiService) DeleteFleetsFleetIdSquadsSquadId(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -403,16 +403,16 @@ Delete a fleet wing, only empty wings can be deleted. The wing may contain squad
 */
 
 type DeleteFleetsFleetIdWingsWingIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) DeleteFleetsFleetIdWingsWingId(ctx context.Context, fleetId int64, wingId int64, localVarOptionals *DeleteFleetsFleetIdWingsWingIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -457,7 +457,7 @@ func (a *FleetsApiService) DeleteFleetsFleetIdWingsWingId(ctx context.Context, f
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -465,8 +465,8 @@ func (a *FleetsApiService) DeleteFleetsFleetIdWingsWingId(ctx context.Context, f
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -577,18 +577,18 @@ Return the fleet ID the character is in, if any.  ---  This route is cached for 
 */
 
 type GetCharactersCharacterIdFleetOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) GetCharactersCharacterIdFleet(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdFleetOpts) (GetCharactersCharacterIdFleetOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdFleetOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdFleetOk
 	)
 
 	// create path and map variables
@@ -638,7 +638,7 @@ func (a *FleetsApiService) GetCharactersCharacterIdFleet(ctx context.Context, ch
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -654,8 +654,8 @@ func (a *FleetsApiService) GetCharactersCharacterIdFleet(ctx context.Context, ch
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -777,18 +777,18 @@ Return details about a fleet  ---  This route is cached for up to 5 seconds
 */
 
 type GetFleetsFleetIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) GetFleetsFleetId(ctx context.Context, fleetId int64, localVarOptionals *GetFleetsFleetIdOpts) (GetFleetsFleetIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFleetsFleetIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFleetsFleetIdOk
 	)
 
 	// create path and map variables
@@ -835,7 +835,7 @@ func (a *FleetsApiService) GetFleetsFleetId(ctx context.Context, fleetId int64, 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -851,8 +851,8 @@ func (a *FleetsApiService) GetFleetsFleetId(ctx context.Context, fleetId int64, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -976,20 +976,20 @@ Return information about fleet members  ---  This route is cached for up to 5 se
 */
 
 type GetFleetsFleetIdMembersOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
-	Token          optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) GetFleetsFleetIdMembers(ctx context.Context, fleetId int64, localVarOptionals *GetFleetsFleetIdMembersOpts) ([]GetFleetsFleetIdMembers200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFleetsFleetIdMembers200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFleetsFleetIdMembers200OkList
 	)
 
 	// create path and map variables
@@ -1042,7 +1042,7 @@ func (a *FleetsApiService) GetFleetsFleetIdMembers(ctx context.Context, fleetId 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1058,8 +1058,8 @@ func (a *FleetsApiService) GetFleetsFleetIdMembers(ctx context.Context, fleetId 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1183,20 +1183,20 @@ Return information about wings in a fleet  ---  This route is cached for up to 5
 */
 
 type GetFleetsFleetIdWingsOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
-	Token          optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) GetFleetsFleetIdWings(ctx context.Context, fleetId int64, localVarOptionals *GetFleetsFleetIdWingsOpts) ([]GetFleetsFleetIdWings200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFleetsFleetIdWings200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFleetsFleetIdWings200OkList
 	)
 
 	// create path and map variables
@@ -1249,7 +1249,7 @@ func (a *FleetsApiService) GetFleetsFleetIdWings(ctx context.Context, fleetId in
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1265,8 +1265,8 @@ func (a *FleetsApiService) GetFleetsFleetIdWings(ctx context.Context, fleetId in
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1388,16 +1388,16 @@ Invite a character into the fleet. If a character has a CSPA charge set it is no
 */
 
 type PostFleetsFleetIdMembersOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PostFleetsFleetIdMembers(ctx context.Context, fleetId int64, invitation PostFleetsFleetIdMembersInvitation, localVarOptionals *PostFleetsFleetIdMembersOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -1443,7 +1443,7 @@ func (a *FleetsApiService) PostFleetsFleetIdMembers(ctx context.Context, fleetId
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -1451,8 +1451,8 @@ func (a *FleetsApiService) PostFleetsFleetIdMembers(ctx context.Context, fleetId
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -1573,17 +1573,17 @@ Create a new wing in a fleet  ---
 */
 
 type PostFleetsFleetIdWingsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PostFleetsFleetIdWings(ctx context.Context, fleetId int64, localVarOptionals *PostFleetsFleetIdWingsOpts) (PostFleetsFleetIdWingsCreated, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostFleetsFleetIdWingsCreated
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostFleetsFleetIdWingsCreated
 	)
 
 	// create path and map variables
@@ -1627,7 +1627,7 @@ func (a *FleetsApiService) PostFleetsFleetIdWings(ctx context.Context, fleetId i
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1643,8 +1643,8 @@ func (a *FleetsApiService) PostFleetsFleetIdWings(ctx context.Context, fleetId i
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {
@@ -1766,17 +1766,17 @@ Create a new squad in a fleet  ---
 */
 
 type PostFleetsFleetIdWingsWingIdSquadsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PostFleetsFleetIdWingsWingIdSquads(ctx context.Context, fleetId int64, wingId int64, localVarOptionals *PostFleetsFleetIdWingsWingIdSquadsOpts) (PostFleetsFleetIdWingsWingIdSquadsCreated, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostFleetsFleetIdWingsWingIdSquadsCreated
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostFleetsFleetIdWingsWingIdSquadsCreated
 	)
 
 	// create path and map variables
@@ -1821,7 +1821,7 @@ func (a *FleetsApiService) PostFleetsFleetIdWingsWingIdSquads(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1837,8 +1837,8 @@ func (a *FleetsApiService) PostFleetsFleetIdWingsWingIdSquads(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {
@@ -1960,16 +1960,16 @@ Update settings about a fleet  ---
 */
 
 type PutFleetsFleetIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PutFleetsFleetId(ctx context.Context, fleetId int64, newSettings PutFleetsFleetIdNewSettings, localVarOptionals *PutFleetsFleetIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -2015,7 +2015,7 @@ func (a *FleetsApiService) PutFleetsFleetId(ctx context.Context, fleetId int64, 
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -2023,8 +2023,8 @@ func (a *FleetsApiService) PutFleetsFleetId(ctx context.Context, fleetId int64, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -2136,16 +2136,16 @@ Move a fleet member around  ---
 */
 
 type PutFleetsFleetIdMembersMemberIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PutFleetsFleetIdMembersMemberId(ctx context.Context, fleetId int64, memberId int32, movement PutFleetsFleetIdMembersMemberIdMovement, localVarOptionals *PutFleetsFleetIdMembersMemberIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -2192,7 +2192,7 @@ func (a *FleetsApiService) PutFleetsFleetIdMembersMemberId(ctx context.Context, 
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -2200,8 +2200,8 @@ func (a *FleetsApiService) PutFleetsFleetIdMembersMemberId(ctx context.Context, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -2324,16 +2324,16 @@ Rename a fleet squad  ---
 */
 
 type PutFleetsFleetIdSquadsSquadIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PutFleetsFleetIdSquadsSquadId(ctx context.Context, fleetId int64, naming PutFleetsFleetIdSquadsSquadIdNaming, squadId int64, localVarOptionals *PutFleetsFleetIdSquadsSquadIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -2380,7 +2380,7 @@ func (a *FleetsApiService) PutFleetsFleetIdSquadsSquadId(ctx context.Context, fl
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -2388,8 +2388,8 @@ func (a *FleetsApiService) PutFleetsFleetIdSquadsSquadId(ctx context.Context, fl
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -2501,16 +2501,16 @@ Rename a fleet wing  ---
 */
 
 type PutFleetsFleetIdWingsWingIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *FleetsApiService) PutFleetsFleetIdWingsWingId(ctx context.Context, fleetId int64, naming PutFleetsFleetIdWingsWingIdNaming, wingId int64, localVarOptionals *PutFleetsFleetIdWingsWingIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -2557,7 +2557,7 @@ func (a *FleetsApiService) PutFleetsFleetIdWingsWingId(ctx context.Context, flee
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -2565,8 +2565,8 @@ func (a *FleetsApiService) PutFleetsFleetIdWingsWingId(ctx context.Context, flee
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {

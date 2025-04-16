@@ -53,17 +53,17 @@ List all active player alliances  ---  This route is cached for up to 3600 secon
 */
 
 type GetAlliancesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *AllianceApiService) GetAlliances(ctx context.Context, localVarOptionals *GetAlliancesOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -106,7 +106,7 @@ func (a *AllianceApiService) GetAlliances(ctx context.Context, localVarOptionals
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -122,8 +122,8 @@ func (a *AllianceApiService) GetAlliances(ctx context.Context, localVarOptionals
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -211,17 +211,17 @@ Public information about an alliance  ---  This route is cached for up to 3600 s
 */
 
 type GetAlliancesAllianceIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *AllianceApiService) GetAlliancesAllianceId(ctx context.Context, allianceId int32, localVarOptionals *GetAlliancesAllianceIdOpts) (GetAlliancesAllianceIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetAlliancesAllianceIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetAlliancesAllianceIdOk
 	)
 
 	// create path and map variables
@@ -268,7 +268,7 @@ func (a *AllianceApiService) GetAlliancesAllianceId(ctx context.Context, allianc
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -284,8 +284,8 @@ func (a *AllianceApiService) GetAlliancesAllianceId(ctx context.Context, allianc
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -384,17 +384,17 @@ List all current member corporations of an alliance  ---  This route is cached f
 */
 
 type GetAlliancesAllianceIdCorporationsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *AllianceApiService) GetAlliancesAllianceIdCorporations(ctx context.Context, allianceId int32, localVarOptionals *GetAlliancesAllianceIdCorporationsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -441,7 +441,7 @@ func (a *AllianceApiService) GetAlliancesAllianceIdCorporations(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -457,8 +457,8 @@ func (a *AllianceApiService) GetAlliancesAllianceIdCorporations(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -546,17 +546,17 @@ Get the icon urls for a alliance  ---  This route expires daily at 11:05
 */
 
 type GetAlliancesAllianceIdIconsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *AllianceApiService) GetAlliancesAllianceIdIcons(ctx context.Context, allianceId int32, localVarOptionals *GetAlliancesAllianceIdIconsOpts) (GetAlliancesAllianceIdIconsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetAlliancesAllianceIdIconsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetAlliancesAllianceIdIconsOk
 	)
 
 	// create path and map variables
@@ -603,7 +603,7 @@ func (a *AllianceApiService) GetAlliancesAllianceIdIcons(ctx context.Context, al
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -619,8 +619,8 @@ func (a *AllianceApiService) GetAlliancesAllianceIdIcons(ctx context.Context, al
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

@@ -51,17 +51,17 @@ EVE Server status  ---  This route is cached for up to 30 seconds
 */
 
 type GetStatusOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *StatusApiService) GetStatus(ctx context.Context, localVarOptionals *GetStatusOpts) (GetStatusOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetStatusOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetStatusOk
 	)
 
 	// create path and map variables
@@ -104,7 +104,7 @@ func (a *StatusApiService) GetStatus(ctx context.Context, localVarOptionals *Get
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -120,8 +120,8 @@ func (a *StatusApiService) GetStatus(ctx context.Context, localVarOptionals *Get
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

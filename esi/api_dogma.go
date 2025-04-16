@@ -53,17 +53,17 @@ Get a list of dogma attribute ids  ---  This route expires daily at 11:05
 */
 
 type GetDogmaAttributesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *DogmaApiService) GetDogmaAttributes(ctx context.Context, localVarOptionals *GetDogmaAttributesOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -106,7 +106,7 @@ func (a *DogmaApiService) GetDogmaAttributes(ctx context.Context, localVarOption
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -122,8 +122,8 @@ func (a *DogmaApiService) GetDogmaAttributes(ctx context.Context, localVarOption
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -211,17 +211,17 @@ Get information on a dogma attribute  ---  This route expires daily at 11:05
 */
 
 type GetDogmaAttributesAttributeIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *DogmaApiService) GetDogmaAttributesAttributeId(ctx context.Context, attributeId int32, localVarOptionals *GetDogmaAttributesAttributeIdOpts) (GetDogmaAttributesAttributeIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetDogmaAttributesAttributeIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetDogmaAttributesAttributeIdOk
 	)
 
 	// create path and map variables
@@ -265,7 +265,7 @@ func (a *DogmaApiService) GetDogmaAttributesAttributeId(ctx context.Context, att
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -281,8 +281,8 @@ func (a *DogmaApiService) GetDogmaAttributesAttributeId(ctx context.Context, att
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -382,17 +382,17 @@ Returns info about a dynamic item resulting from mutation with a mutaplasmid.  -
 */
 
 type GetDogmaDynamicItemsTypeIdItemIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *DogmaApiService) GetDogmaDynamicItemsTypeIdItemId(ctx context.Context, itemId int64, typeId int32, localVarOptionals *GetDogmaDynamicItemsTypeIdItemIdOpts) (GetDogmaDynamicItemsTypeIdItemIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetDogmaDynamicItemsTypeIdItemIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetDogmaDynamicItemsTypeIdItemIdOk
 	)
 
 	// create path and map variables
@@ -437,7 +437,7 @@ func (a *DogmaApiService) GetDogmaDynamicItemsTypeIdItemId(ctx context.Context, 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -453,8 +453,8 @@ func (a *DogmaApiService) GetDogmaDynamicItemsTypeIdItemId(ctx context.Context, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -552,17 +552,17 @@ Get a list of dogma effect ids  ---  This route expires daily at 11:05
 */
 
 type GetDogmaEffectsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *DogmaApiService) GetDogmaEffects(ctx context.Context, localVarOptionals *GetDogmaEffectsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -605,7 +605,7 @@ func (a *DogmaApiService) GetDogmaEffects(ctx context.Context, localVarOptionals
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -621,8 +621,8 @@ func (a *DogmaApiService) GetDogmaEffects(ctx context.Context, localVarOptionals
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -710,17 +710,17 @@ Get information on a dogma effect  ---  This route expires daily at 11:05
 */
 
 type GetDogmaEffectsEffectIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *DogmaApiService) GetDogmaEffectsEffectId(ctx context.Context, effectId int32, localVarOptionals *GetDogmaEffectsEffectIdOpts) (GetDogmaEffectsEffectIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetDogmaEffectsEffectIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetDogmaEffectsEffectIdOk
 	)
 
 	// create path and map variables
@@ -764,7 +764,7 @@ func (a *DogmaApiService) GetDogmaEffectsEffectId(ctx context.Context, effectId 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -780,8 +780,8 @@ func (a *DogmaApiService) GetDogmaEffectsEffectId(ctx context.Context, effectId 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

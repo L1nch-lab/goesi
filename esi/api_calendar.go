@@ -56,19 +56,19 @@ Get 50 event summaries from the calendar. If no from_event ID is given, the reso
 */
 
 type GetCharactersCharacterIdCalendarOpts struct {
-	Datasource  optional.String
-	FromEvent   optional.Int32
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	FromEvent	optional.Int32
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CalendarApiService) GetCharactersCharacterIdCalendar(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdCalendarOpts) ([]GetCharactersCharacterIdCalendar200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdCalendar200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdCalendar200OkList
 	)
 
 	// create path and map variables
@@ -121,7 +121,7 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendar(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -137,8 +137,8 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendar(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -250,18 +250,18 @@ Get all the information for a specific event  ---  This route is cached for up t
 */
 
 type GetCharactersCharacterIdCalendarEventIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventId(ctx context.Context, characterId int32, eventId int32, localVarOptionals *GetCharactersCharacterIdCalendarEventIdOpts) (GetCharactersCharacterIdCalendarEventIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdCalendarEventIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdCalendarEventIdOk
 	)
 
 	// create path and map variables
@@ -312,7 +312,7 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventId(ctx context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -328,8 +328,8 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventId(ctx context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -452,18 +452,18 @@ Get all invited attendees for a given event  ---  This route is cached for up to
 */
 
 type GetCharactersCharacterIdCalendarEventIdAttendeesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventIdAttendees(ctx context.Context, characterId int32, eventId int32, localVarOptionals *GetCharactersCharacterIdCalendarEventIdAttendeesOpts) ([]GetCharactersCharacterIdCalendarEventIdAttendees200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdCalendarEventIdAttendees200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdCalendarEventIdAttendees200OkList
 	)
 
 	// create path and map variables
@@ -514,7 +514,7 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventIdAttendees(ct
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -530,8 +530,8 @@ func (a *CalendarApiService) GetCharactersCharacterIdCalendarEventIdAttendees(ct
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -654,16 +654,16 @@ Set your response status to an event  ---  This route is cached for up to 5 seco
 */
 
 type PutCharactersCharacterIdCalendarEventIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *CalendarApiService) PutCharactersCharacterIdCalendarEventId(ctx context.Context, characterId int32, eventId int32, response PutCharactersCharacterIdCalendarEventIdResponse, localVarOptionals *PutCharactersCharacterIdCalendarEventIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -713,7 +713,7 @@ func (a *CalendarApiService) PutCharactersCharacterIdCalendarEventId(ctx context
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -721,8 +721,8 @@ func (a *CalendarApiService) PutCharactersCharacterIdCalendarEventId(ctx context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {

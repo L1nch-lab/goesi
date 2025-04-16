@@ -54,17 +54,17 @@ Public information about a corporation  ---  This route is cached for up to 3600
 */
 
 type GetCorporationsCorporationIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationId(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdOpts) (GetCorporationsCorporationIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdOk
 	)
 
 	// create path and map variables
@@ -111,7 +111,7 @@ func (a *CorporationApiService) GetCorporationsCorporationId(ctx context.Context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -127,8 +127,8 @@ func (a *CorporationApiService) GetCorporationsCorporationId(ctx context.Context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -227,17 +227,17 @@ Get a list of all the alliances a corporation has been a member of  ---  This ro
 */
 
 type GetCorporationsCorporationIdAlliancehistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdAlliancehistory(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdAlliancehistoryOpts) ([]GetCorporationsCorporationIdAlliancehistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdAlliancehistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdAlliancehistory200OkList
 	)
 
 	// create path and map variables
@@ -284,7 +284,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdAlliancehistory(ctx 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -300,8 +300,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdAlliancehistory(ctx 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -391,19 +391,19 @@ Returns a list of blueprints the corporation owns  ---  This route is cached for
 */
 
 type GetCorporationsCorporationIdBlueprintsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdBlueprints(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdBlueprintsOpts) ([]GetCorporationsCorporationIdBlueprints200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdBlueprints200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdBlueprints200OkList
 	)
 
 	// create path and map variables
@@ -456,7 +456,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdBlueprints(ctx conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -472,8 +472,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdBlueprints(ctx conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -585,19 +585,19 @@ Returns logs recorded in the past seven days from all audit log secure container
 */
 
 type GetCorporationsCorporationIdContainersLogsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdContainersLogs(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContainersLogsOpts) ([]GetCorporationsCorporationIdContainersLogs200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContainersLogs200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContainersLogs200OkList
 	)
 
 	// create path and map variables
@@ -650,7 +650,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdContainersLogs(ctx c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -666,8 +666,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdContainersLogs(ctx c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -778,18 +778,18 @@ Return corporation hangar and wallet division names, only show if a division is 
 */
 
 type GetCorporationsCorporationIdDivisionsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdDivisions(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdDivisionsOpts) (GetCorporationsCorporationIdDivisionsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdDivisionsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdDivisionsOk
 	)
 
 	// create path and map variables
@@ -839,7 +839,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdDivisions(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -855,8 +855,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdDivisions(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -967,18 +967,18 @@ Return a corporation&#39;s facilities  ---  This route is cached for up to 3600 
 */
 
 type GetCorporationsCorporationIdFacilitiesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdFacilities(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdFacilitiesOpts) ([]GetCorporationsCorporationIdFacilities200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdFacilities200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdFacilities200OkList
 	)
 
 	// create path and map variables
@@ -1028,7 +1028,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdFacilities(ctx conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1044,8 +1044,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdFacilities(ctx conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1155,17 +1155,17 @@ Get the icon urls for a corporation  ---  This route is cached for up to 3600 se
 */
 
 type GetCorporationsCorporationIdIconsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdIcons(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdIconsOpts) (GetCorporationsCorporationIdIconsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdIconsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdIconsOk
 	)
 
 	// create path and map variables
@@ -1212,7 +1212,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdIcons(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1228,8 +1228,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdIcons(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1330,19 +1330,19 @@ Returns a corporation&#39;s medals  ---  This route is cached for up to 3600 sec
 */
 
 type GetCorporationsCorporationIdMedalsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMedals(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMedalsOpts) ([]GetCorporationsCorporationIdMedals200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdMedals200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdMedals200OkList
 	)
 
 	// create path and map variables
@@ -1395,7 +1395,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMedals(ctx context.C
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1411,8 +1411,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMedals(ctx context.C
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1524,19 +1524,19 @@ Returns medals issued by a corporation  ---  This route is cached for up to 3600
 */
 
 type GetCorporationsCorporationIdMedalsIssuedOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMedalsIssued(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMedalsIssuedOpts) ([]GetCorporationsCorporationIdMedalsIssued200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdMedalsIssued200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdMedalsIssued200OkList
 	)
 
 	// create path and map variables
@@ -1589,7 +1589,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMedalsIssued(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1605,8 +1605,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMedalsIssued(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1717,18 +1717,18 @@ Return the current member list of a corporation, the token&#39;s character need 
 */
 
 type GetCorporationsCorporationIdMembersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMembers(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMembersOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -1778,7 +1778,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembers(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1794,8 +1794,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembers(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1906,18 +1906,18 @@ Return a corporation&#39;s member limit, not including CEO himself  ---  This ro
 */
 
 type GetCorporationsCorporationIdMembersLimitOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMembersLimit(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMembersLimitOpts) (int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	int32
 	)
 
 	// create path and map variables
@@ -1967,7 +1967,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembersLimit(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1983,8 +1983,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembersLimit(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2095,18 +2095,18 @@ Returns a corporation&#39;s members&#39; titles  ---  This route is cached for u
 */
 
 type GetCorporationsCorporationIdMembersTitlesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMembersTitles(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMembersTitlesOpts) ([]GetCorporationsCorporationIdMembersTitles200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdMembersTitles200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdMembersTitles200OkList
 	)
 
 	// create path and map variables
@@ -2156,7 +2156,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembersTitles(ctx co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2172,8 +2172,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembersTitles(ctx co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2284,18 +2284,18 @@ Returns additional information about a corporation&#39;s members which helps tra
 */
 
 type GetCorporationsCorporationIdMembertrackingOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdMembertracking(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdMembertrackingOpts) ([]GetCorporationsCorporationIdMembertracking200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdMembertracking200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdMembertracking200OkList
 	)
 
 	// create path and map variables
@@ -2345,7 +2345,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembertracking(ctx c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2361,8 +2361,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdMembertracking(ctx c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2473,18 +2473,18 @@ Return the roles of all members if the character has the personnel manager role 
 */
 
 type GetCorporationsCorporationIdRolesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdRoles(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdRolesOpts) ([]GetCorporationsCorporationIdRoles200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdRoles200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdRoles200OkList
 	)
 
 	// create path and map variables
@@ -2534,7 +2534,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdRoles(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2550,8 +2550,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdRoles(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2663,19 +2663,19 @@ Return how roles have changed for a coporation&#39;s members, up to a month  ---
 */
 
 type GetCorporationsCorporationIdRolesHistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdRolesHistory(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdRolesHistoryOpts) ([]GetCorporationsCorporationIdRolesHistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdRolesHistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdRolesHistory200OkList
 	)
 
 	// create path and map variables
@@ -2728,7 +2728,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdRolesHistory(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2744,8 +2744,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdRolesHistory(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2857,19 +2857,19 @@ Return the current shareholders of a corporation.  ---  This route is cached for
 */
 
 type GetCorporationsCorporationIdShareholdersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdShareholders(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdShareholdersOpts) ([]GetCorporationsCorporationIdShareholders200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdShareholders200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdShareholders200OkList
 	)
 
 	// create path and map variables
@@ -2922,7 +2922,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdShareholders(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2938,8 +2938,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdShareholders(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3051,19 +3051,19 @@ Return corporation standings from agents, NPC corporations, and factions  ---  T
 */
 
 type GetCorporationsCorporationIdStandingsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdStandings(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdStandingsOpts) ([]GetCorporationsCorporationIdStandings200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdStandings200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdStandings200OkList
 	)
 
 	// create path and map variables
@@ -3116,7 +3116,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStandings(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3132,8 +3132,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStandings(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3245,19 +3245,19 @@ Returns list of corporation starbases (POSes)  ---  This route is cached for up 
 */
 
 type GetCorporationsCorporationIdStarbasesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdStarbases(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdStarbasesOpts) ([]GetCorporationsCorporationIdStarbases200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdStarbases200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdStarbases200OkList
 	)
 
 	// create path and map variables
@@ -3310,7 +3310,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStarbases(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3326,8 +3326,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStarbases(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3440,18 +3440,18 @@ Returns various settings and fuels of a starbase (POS)  ---  This route is cache
 */
 
 type GetCorporationsCorporationIdStarbasesStarbaseIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdStarbasesStarbaseId(ctx context.Context, corporationId int32, starbaseId int64, systemId int32, localVarOptionals *GetCorporationsCorporationIdStarbasesStarbaseIdOpts) (GetCorporationsCorporationIdStarbasesStarbaseIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdStarbasesStarbaseIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdStarbasesStarbaseIdOk
 	)
 
 	// create path and map variables
@@ -3503,7 +3503,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStarbasesStarbaseId(
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3519,8 +3519,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStarbasesStarbaseId(
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3634,21 +3634,21 @@ Get a list of corporation structures. This route&#39;s version includes the chan
 */
 
 type GetCorporationsCorporationIdStructuresOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
-	Page           optional.Int32
-	Token          optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdStructures(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdStructuresOpts) ([]GetCorporationsCorporationIdStructures200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdStructures200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdStructures200OkList
 	)
 
 	// create path and map variables
@@ -3707,7 +3707,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStructures(ctx conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3723,8 +3723,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdStructures(ctx conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3835,18 +3835,18 @@ Returns a corporation&#39;s titles  ---  This route is cached for up to 3600 sec
 */
 
 type GetCorporationsCorporationIdTitlesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsCorporationIdTitles(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdTitlesOpts) ([]GetCorporationsCorporationIdTitles200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdTitles200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdTitles200OkList
 	)
 
 	// create path and map variables
@@ -3896,7 +3896,7 @@ func (a *CorporationApiService) GetCorporationsCorporationIdTitles(ctx context.C
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3912,8 +3912,8 @@ func (a *CorporationApiService) GetCorporationsCorporationIdTitles(ctx context.C
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4022,17 +4022,17 @@ Get a list of npc corporations  ---  This route expires daily at 11:05
 */
 
 type GetCorporationsNpccorpsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CorporationApiService) GetCorporationsNpccorps(ctx context.Context, localVarOptionals *GetCorporationsNpccorpsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -4075,7 +4075,7 @@ func (a *CorporationApiService) GetCorporationsNpccorps(ctx context.Context, loc
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4091,8 +4091,8 @@ func (a *CorporationApiService) GetCorporationsNpccorps(ctx context.Context, loc
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

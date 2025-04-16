@@ -22,3 +22,7 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# Fix tool sources and build output
+fixtool/
+fixtool_debug

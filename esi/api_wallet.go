@@ -55,18 +55,18 @@ Returns a character&#39;s wallet balance  ---  This route is cached for up to 12
 */
 
 type GetCharactersCharacterIdWalletOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCharactersCharacterIdWallet(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdWalletOpts) (float64, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue float64
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	float64
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *WalletApiService) GetCharactersCharacterIdWallet(ctx context.Context, c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *WalletApiService) GetCharactersCharacterIdWallet(ctx context.Context, c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -245,19 +245,19 @@ Retrieve the given character&#39;s wallet journal going 30 days back  ---  This 
 */
 
 type GetCharactersCharacterIdWalletJournalOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCharactersCharacterIdWalletJournal(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdWalletJournalOpts) ([]GetCharactersCharacterIdWalletJournal200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdWalletJournal200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdWalletJournal200OkList
 	)
 
 	// create path and map variables
@@ -310,7 +310,7 @@ func (a *WalletApiService) GetCharactersCharacterIdWalletJournal(ctx context.Con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -326,8 +326,8 @@ func (a *WalletApiService) GetCharactersCharacterIdWalletJournal(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -439,19 +439,19 @@ Get wallet transactions of a character  ---  This route is cached for up to 3600
 */
 
 type GetCharactersCharacterIdWalletTransactionsOpts struct {
-	Datasource  optional.String
-	FromId      optional.Int64
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	FromId		optional.Int64
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCharactersCharacterIdWalletTransactions(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdWalletTransactionsOpts) ([]GetCharactersCharacterIdWalletTransactions200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdWalletTransactions200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdWalletTransactions200OkList
 	)
 
 	// create path and map variables
@@ -504,7 +504,7 @@ func (a *WalletApiService) GetCharactersCharacterIdWalletTransactions(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -520,8 +520,8 @@ func (a *WalletApiService) GetCharactersCharacterIdWalletTransactions(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -632,18 +632,18 @@ Get a corporation&#39;s wallets  ---  This route is cached for up to 300 seconds
 */
 
 type GetCorporationsCorporationIdWalletsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCorporationsCorporationIdWallets(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdWalletsOpts) ([]GetCorporationsCorporationIdWallets200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdWallets200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdWallets200OkList
 	)
 
 	// create path and map variables
@@ -693,7 +693,7 @@ func (a *WalletApiService) GetCorporationsCorporationIdWallets(ctx context.Conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -709,8 +709,8 @@ func (a *WalletApiService) GetCorporationsCorporationIdWallets(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -823,19 +823,19 @@ Retrieve the given corporation&#39;s wallet journal for the given division going
 */
 
 type GetCorporationsCorporationIdWalletsDivisionJournalOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionJournal(ctx context.Context, corporationId int32, division int32, localVarOptionals *GetCorporationsCorporationIdWalletsDivisionJournalOpts) ([]GetCorporationsCorporationIdWalletsDivisionJournal200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdWalletsDivisionJournal200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdWalletsDivisionJournal200OkList
 	)
 
 	// create path and map variables
@@ -895,7 +895,7 @@ func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionJournal(ct
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -911,8 +911,8 @@ func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionJournal(ct
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1025,19 +1025,19 @@ Get wallet transactions of a corporation  ---  This route is cached for up to 36
 */
 
 type GetCorporationsCorporationIdWalletsDivisionTransactionsOpts struct {
-	Datasource  optional.String
-	FromId      optional.Int64
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	FromId		optional.Int64
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionTransactions(ctx context.Context, corporationId int32, division int32, localVarOptionals *GetCorporationsCorporationIdWalletsDivisionTransactionsOpts) ([]GetCorporationsCorporationIdWalletsDivisionTransactions200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdWalletsDivisionTransactions200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdWalletsDivisionTransactions200OkList
 	)
 
 	// create path and map variables
@@ -1097,7 +1097,7 @@ func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionTransactio
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1113,8 +1113,8 @@ func (a *WalletApiService) GetCorporationsCorporationIdWalletsDivisionTransactio
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

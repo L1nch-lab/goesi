@@ -56,19 +56,19 @@ List industry jobs placed by a character  ---  This route is cached for up to 30
 */
 
 type GetCharactersCharacterIdIndustryJobsOpts struct {
-	Datasource       optional.String
-	IfNoneMatch      optional.String
-	IncludeCompleted optional.Bool
-	Token            optional.String
+	Datasource		optional.String
+	IfNoneMatch		optional.String
+	IncludeCompleted	optional.Bool
+	Token			optional.String
 }
 
 func (a *IndustryApiService) GetCharactersCharacterIdIndustryJobs(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdIndustryJobsOpts) ([]GetCharactersCharacterIdIndustryJobs200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdIndustryJobs200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdIndustryJobs200OkList
 	)
 
 	// create path and map variables
@@ -121,7 +121,7 @@ func (a *IndustryApiService) GetCharactersCharacterIdIndustryJobs(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -137,8 +137,8 @@ func (a *IndustryApiService) GetCharactersCharacterIdIndustryJobs(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -250,19 +250,19 @@ Paginated record of all mining done by a character for the past 30 days  ---  Th
 */
 
 type GetCharactersCharacterIdMiningOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *IndustryApiService) GetCharactersCharacterIdMining(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdMiningOpts) ([]GetCharactersCharacterIdMining200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMining200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMining200OkList
 	)
 
 	// create path and map variables
@@ -315,7 +315,7 @@ func (a *IndustryApiService) GetCharactersCharacterIdMining(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -331,8 +331,8 @@ func (a *IndustryApiService) GetCharactersCharacterIdMining(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -444,19 +444,19 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 */
 
 type GetCorporationCorporationIdMiningExtractionsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *IndustryApiService) GetCorporationCorporationIdMiningExtractions(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationCorporationIdMiningExtractionsOpts) ([]GetCorporationCorporationIdMiningExtractions200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationCorporationIdMiningExtractions200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationCorporationIdMiningExtractions200OkList
 	)
 
 	// create path and map variables
@@ -509,7 +509,7 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningExtractions(ctx co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -525,8 +525,8 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningExtractions(ctx co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -638,19 +638,19 @@ Paginated list of all entities capable of observing and recording mining for a c
 */
 
 type GetCorporationCorporationIdMiningObserversOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *IndustryApiService) GetCorporationCorporationIdMiningObservers(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationCorporationIdMiningObserversOpts) ([]GetCorporationCorporationIdMiningObservers200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationCorporationIdMiningObservers200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationCorporationIdMiningObservers200OkList
 	)
 
 	// create path and map variables
@@ -703,7 +703,7 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningObservers(ctx cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -719,8 +719,8 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningObservers(ctx cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -833,19 +833,19 @@ Paginated record of all mining seen by an observer  ---  This route is cached fo
 */
 
 type GetCorporationCorporationIdMiningObserversObserverIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *IndustryApiService) GetCorporationCorporationIdMiningObserversObserverId(ctx context.Context, corporationId int32, observerId int64, localVarOptionals *GetCorporationCorporationIdMiningObserversObserverIdOpts) ([]GetCorporationCorporationIdMiningObserversObserverId200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationCorporationIdMiningObserversObserverId200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationCorporationIdMiningObserversObserverId200OkList
 	)
 
 	// create path and map variables
@@ -899,7 +899,7 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningObserversObserverI
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -915,8 +915,8 @@ func (a *IndustryApiService) GetCorporationCorporationIdMiningObserversObserverI
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1029,20 +1029,20 @@ List industry jobs run by a corporation  ---  This route is cached for up to 300
 */
 
 type GetCorporationsCorporationIdIndustryJobsOpts struct {
-	Datasource       optional.String
-	IfNoneMatch      optional.String
-	IncludeCompleted optional.Bool
-	Page             optional.Int32
-	Token            optional.String
+	Datasource		optional.String
+	IfNoneMatch		optional.String
+	IncludeCompleted	optional.Bool
+	Page			optional.Int32
+	Token			optional.String
 }
 
 func (a *IndustryApiService) GetCorporationsCorporationIdIndustryJobs(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdIndustryJobsOpts) ([]GetCorporationsCorporationIdIndustryJobs200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdIndustryJobs200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdIndustryJobs200OkList
 	)
 
 	// create path and map variables
@@ -1098,7 +1098,7 @@ func (a *IndustryApiService) GetCorporationsCorporationIdIndustryJobs(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1114,8 +1114,8 @@ func (a *IndustryApiService) GetCorporationsCorporationIdIndustryJobs(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1224,17 +1224,17 @@ Return a list of industry facilities  ---  This route is cached for up to 3600 s
 */
 
 type GetIndustryFacilitiesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *IndustryApiService) GetIndustryFacilities(ctx context.Context, localVarOptionals *GetIndustryFacilitiesOpts) ([]GetIndustryFacilities200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetIndustryFacilities200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetIndustryFacilities200OkList
 	)
 
 	// create path and map variables
@@ -1277,7 +1277,7 @@ func (a *IndustryApiService) GetIndustryFacilities(ctx context.Context, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1293,8 +1293,8 @@ func (a *IndustryApiService) GetIndustryFacilities(ctx context.Context, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1381,17 +1381,17 @@ Return cost indices for solar systems  ---  This route is cached for up to 3600 
 */
 
 type GetIndustrySystemsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *IndustryApiService) GetIndustrySystems(ctx context.Context, localVarOptionals *GetIndustrySystemsOpts) ([]GetIndustrySystems200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetIndustrySystems200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetIndustrySystems200OkList
 	)
 
 	// create path and map variables
@@ -1434,7 +1434,7 @@ func (a *IndustryApiService) GetIndustrySystems(ctx context.Context, localVarOpt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1450,8 +1450,8 @@ func (a *IndustryApiService) GetIndustrySystems(ctx context.Context, localVarOpt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

@@ -51,17 +51,17 @@ Shows sovereignty data for campaigns.  ---  This route is cached for up to 5 sec
 */
 
 type GetSovereigntyCampaignsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *SovereigntyApiService) GetSovereigntyCampaigns(ctx context.Context, localVarOptionals *GetSovereigntyCampaignsOpts) ([]GetSovereigntyCampaigns200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetSovereigntyCampaigns200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetSovereigntyCampaigns200OkList
 	)
 
 	// create path and map variables
@@ -104,7 +104,7 @@ func (a *SovereigntyApiService) GetSovereigntyCampaigns(ctx context.Context, loc
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -120,8 +120,8 @@ func (a *SovereigntyApiService) GetSovereigntyCampaigns(ctx context.Context, loc
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -208,17 +208,17 @@ Shows sovereignty information for solar systems  ---  This route is cached for u
 */
 
 type GetSovereigntyMapOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *SovereigntyApiService) GetSovereigntyMap(ctx context.Context, localVarOptionals *GetSovereigntyMapOpts) ([]GetSovereigntyMap200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetSovereigntyMap200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetSovereigntyMap200OkList
 	)
 
 	// create path and map variables
@@ -261,7 +261,7 @@ func (a *SovereigntyApiService) GetSovereigntyMap(ctx context.Context, localVarO
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -277,8 +277,8 @@ func (a *SovereigntyApiService) GetSovereigntyMap(ctx context.Context, localVarO
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -365,17 +365,17 @@ Shows sovereignty data for structures.  ---  This route is cached for up to 120 
 */
 
 type GetSovereigntyStructuresOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *SovereigntyApiService) GetSovereigntyStructures(ctx context.Context, localVarOptionals *GetSovereigntyStructuresOpts) ([]GetSovereigntyStructures200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetSovereigntyStructures200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetSovereigntyStructures200OkList
 	)
 
 	// create path and map variables
@@ -418,7 +418,7 @@ func (a *SovereigntyApiService) GetSovereigntyStructures(ctx context.Context, lo
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -434,8 +434,8 @@ func (a *SovereigntyApiService) GetSovereigntyStructures(ctx context.Context, lo
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

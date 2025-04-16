@@ -55,18 +55,18 @@ A list of the character&#39;s clones  ---  This route is cached for up to 120 se
 */
 
 type GetCharactersCharacterIdClonesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ClonesApiService) GetCharactersCharacterIdClones(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdClonesOpts) (GetCharactersCharacterIdClonesOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdClonesOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdClonesOk
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *ClonesApiService) GetCharactersCharacterIdClones(ctx context.Context, c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *ClonesApiService) GetCharactersCharacterIdClones(ctx context.Context, c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -244,18 +244,18 @@ Return implants on the active clone of a character  ---  This route is cached fo
 */
 
 type GetCharactersCharacterIdImplantsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ClonesApiService) GetCharactersCharacterIdImplants(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdImplantsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -305,7 +305,7 @@ func (a *ClonesApiService) GetCharactersCharacterIdImplants(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -321,8 +321,8 @@ func (a *ClonesApiService) GetCharactersCharacterIdImplants(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

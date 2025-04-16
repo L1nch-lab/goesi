@@ -55,16 +55,16 @@ Delete a mail label  ---
 */
 
 type DeleteCharactersCharacterIdMailLabelsLabelIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) DeleteCharactersCharacterIdMailLabelsLabelId(ctx context.Context, characterId int32, labelId int32, localVarOptionals *DeleteCharactersCharacterIdMailLabelsLabelIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -112,7 +112,7 @@ func (a *MailApiService) DeleteCharactersCharacterIdMailLabelsLabelId(ctx contex
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -120,8 +120,8 @@ func (a *MailApiService) DeleteCharactersCharacterIdMailLabelsLabelId(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -232,16 +232,16 @@ Delete a mail  ---
 */
 
 type DeleteCharactersCharacterIdMailMailIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) DeleteCharactersCharacterIdMailMailId(ctx context.Context, characterId int32, mailId int32, localVarOptionals *DeleteCharactersCharacterIdMailMailIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -289,7 +289,7 @@ func (a *MailApiService) DeleteCharactersCharacterIdMailMailId(ctx context.Conte
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -297,8 +297,8 @@ func (a *MailApiService) DeleteCharactersCharacterIdMailMailId(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -400,20 +400,20 @@ Return the 50 most recent mail headers belonging to the character that match the
 */
 
 type GetCharactersCharacterIdMailOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Labels      optional.Interface
-	LastMailId  optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Labels		optional.Interface
+	LastMailId	optional.Int32
+	Token		optional.String
 }
 
 func (a *MailApiService) GetCharactersCharacterIdMail(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdMailOpts) ([]GetCharactersCharacterIdMail200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMail200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMail200OkList
 	)
 
 	// create path and map variables
@@ -469,7 +469,7 @@ func (a *MailApiService) GetCharactersCharacterIdMail(ctx context.Context, chara
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -485,8 +485,8 @@ func (a *MailApiService) GetCharactersCharacterIdMail(ctx context.Context, chara
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -597,18 +597,18 @@ Return a list of the users mail labels, unread counts for each label and a total
 */
 
 type GetCharactersCharacterIdMailLabelsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) GetCharactersCharacterIdMailLabels(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdMailLabelsOpts) (GetCharactersCharacterIdMailLabelsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMailLabelsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMailLabelsOk
 	)
 
 	// create path and map variables
@@ -658,7 +658,7 @@ func (a *MailApiService) GetCharactersCharacterIdMailLabels(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -674,8 +674,8 @@ func (a *MailApiService) GetCharactersCharacterIdMailLabels(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -786,18 +786,18 @@ Return all mailing lists that the character is subscribed to  ---  This route is
 */
 
 type GetCharactersCharacterIdMailListsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) GetCharactersCharacterIdMailLists(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdMailListsOpts) ([]GetCharactersCharacterIdMailLists200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMailLists200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMailLists200OkList
 	)
 
 	// create path and map variables
@@ -847,7 +847,7 @@ func (a *MailApiService) GetCharactersCharacterIdMailLists(ctx context.Context, 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -863,8 +863,8 @@ func (a *MailApiService) GetCharactersCharacterIdMailLists(ctx context.Context, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -976,18 +976,18 @@ Return the contents of an EVE mail  ---  This route is cached for up to 30 secon
 */
 
 type GetCharactersCharacterIdMailMailIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) GetCharactersCharacterIdMailMailId(ctx context.Context, characterId int32, mailId int32, localVarOptionals *GetCharactersCharacterIdMailMailIdOpts) (GetCharactersCharacterIdMailMailIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMailMailIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMailMailIdOk
 	)
 
 	// create path and map variables
@@ -1038,7 +1038,7 @@ func (a *MailApiService) GetCharactersCharacterIdMailMailId(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1054,8 +1054,8 @@ func (a *MailApiService) GetCharactersCharacterIdMailMailId(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1177,17 +1177,17 @@ Create and send a new mail  ---
 */
 
 type PostCharactersCharacterIdMailOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) PostCharactersCharacterIdMail(ctx context.Context, characterId int32, mail PostCharactersCharacterIdMailMail, localVarOptionals *PostCharactersCharacterIdMailOpts) (int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue int32
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	int32
 	)
 
 	// create path and map variables
@@ -1236,7 +1236,7 @@ func (a *MailApiService) PostCharactersCharacterIdMail(ctx context.Context, char
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1252,8 +1252,8 @@ func (a *MailApiService) PostCharactersCharacterIdMail(ctx context.Context, char
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {
@@ -1375,17 +1375,17 @@ Create a mail label  ---
 */
 
 type PostCharactersCharacterIdMailLabelsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) PostCharactersCharacterIdMailLabels(ctx context.Context, characterId int32, label PostCharactersCharacterIdMailLabelsLabel, localVarOptionals *PostCharactersCharacterIdMailLabelsOpts) (int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue int32
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	int32
 	)
 
 	// create path and map variables
@@ -1434,7 +1434,7 @@ func (a *MailApiService) PostCharactersCharacterIdMailLabels(ctx context.Context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1450,8 +1450,8 @@ func (a *MailApiService) PostCharactersCharacterIdMailLabels(ctx context.Context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {
@@ -1563,16 +1563,16 @@ Update metadata about a mail  ---
 */
 
 type PutCharactersCharacterIdMailMailIdOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *MailApiService) PutCharactersCharacterIdMailMailId(ctx context.Context, characterId int32, contents PutCharactersCharacterIdMailMailIdContents, mailId int32, localVarOptionals *PutCharactersCharacterIdMailMailIdOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -1622,7 +1622,7 @@ func (a *MailApiService) PutCharactersCharacterIdMailMailId(ctx context.Context,
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -1630,8 +1630,8 @@ func (a *MailApiService) PutCharactersCharacterIdMailMailId(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {

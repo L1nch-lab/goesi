@@ -56,18 +56,18 @@ Diff two ESI specs
 */
 
 type GetDiffVersionAVersionBOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *WebUIApiService) GetDiffVersionAVersionB(ctx context.Context, versionA string, versionB string, localVarOptionals *GetDiffVersionAVersionBOpts) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue string
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	string
 	)
 
 	// create path and map variables
@@ -115,7 +115,7 @@ func (a *WebUIApiService) GetDiffVersionAVersionB(ctx context.Context, versionA 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -131,8 +131,8 @@ func (a *WebUIApiService) GetDiffVersionAVersionB(ctx context.Context, versionA 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -166,19 +166,19 @@ ESI web UI. This is an open source project. If you find ESI web UI specific bugs
 */
 
 type GetUiOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
-	Version    optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
+	Version		optional.String
 }
 
 func (a *WebUIApiService) GetUi(ctx context.Context, localVarOptionals *GetUiOpts) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue string
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	string
 	)
 
 	// create path and map variables
@@ -227,7 +227,7 @@ func (a *WebUIApiService) GetUi(ctx context.Context, localVarOptionals *GetUiOpt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -243,8 +243,8 @@ func (a *WebUIApiService) GetUi(ctx context.Context, localVarOptionals *GetUiOpt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

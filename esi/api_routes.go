@@ -58,20 +58,20 @@ Get the systems between origin and destination  ---  This route is cached for up
 */
 
 type GetRouteOriginDestinationOpts struct {
-	Avoid       optional.Interface
-	Connections optional.Interface
-	Datasource  optional.String
-	Flag        optional.String
-	IfNoneMatch optional.String
+	Avoid		optional.Interface
+	Connections	optional.Interface
+	Datasource	optional.String
+	Flag		optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *RoutesApiService) GetRouteOriginDestination(ctx context.Context, destination int32, origin int32, localVarOptionals *GetRouteOriginDestinationOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -125,7 +125,7 @@ func (a *RoutesApiService) GetRouteOriginDestination(ctx context.Context, destin
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -141,8 +141,8 @@ func (a *RoutesApiService) GetRouteOriginDestination(ctx context.Context, destin
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

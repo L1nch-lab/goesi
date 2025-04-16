@@ -54,16 +54,16 @@ Set a solar system as autopilot waypoint  ---
 */
 
 type PostUiAutopilotWaypointOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *UserInterfaceApiService) PostUiAutopilotWaypoint(ctx context.Context, addToBeginning bool, clearOtherWaypoints bool, destinationId int64, localVarOptionals *PostUiAutopilotWaypointOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -109,7 +109,7 @@ func (a *UserInterfaceApiService) PostUiAutopilotWaypoint(ctx context.Context, a
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -117,8 +117,8 @@ func (a *UserInterfaceApiService) PostUiAutopilotWaypoint(ctx context.Context, a
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -217,16 +217,16 @@ Open the contract window inside the client  ---
 */
 
 type PostUiOpenwindowContractOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *UserInterfaceApiService) PostUiOpenwindowContract(ctx context.Context, contractId int32, localVarOptionals *PostUiOpenwindowContractOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -270,7 +270,7 @@ func (a *UserInterfaceApiService) PostUiOpenwindowContract(ctx context.Context, 
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -278,8 +278,8 @@ func (a *UserInterfaceApiService) PostUiOpenwindowContract(ctx context.Context, 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -378,16 +378,16 @@ Open the information window for a character, corporation or alliance inside the 
 */
 
 type PostUiOpenwindowInformationOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *UserInterfaceApiService) PostUiOpenwindowInformation(ctx context.Context, targetId int32, localVarOptionals *PostUiOpenwindowInformationOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -431,7 +431,7 @@ func (a *UserInterfaceApiService) PostUiOpenwindowInformation(ctx context.Contex
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -439,8 +439,8 @@ func (a *UserInterfaceApiService) PostUiOpenwindowInformation(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -539,16 +539,16 @@ Open the market details window for a specific typeID inside the client  ---
 */
 
 type PostUiOpenwindowMarketdetailsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *UserInterfaceApiService) PostUiOpenwindowMarketdetails(ctx context.Context, typeId int32, localVarOptionals *PostUiOpenwindowMarketdetailsOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -592,7 +592,7 @@ func (a *UserInterfaceApiService) PostUiOpenwindowMarketdetails(ctx context.Cont
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -600,8 +600,8 @@ func (a *UserInterfaceApiService) PostUiOpenwindowMarketdetails(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -700,16 +700,16 @@ Open the New Mail window, according to settings from the request if applicable  
 */
 
 type PostUiOpenwindowNewmailOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *UserInterfaceApiService) PostUiOpenwindowNewmail(ctx context.Context, newMail PostUiOpenwindowNewmailNewMail, localVarOptionals *PostUiOpenwindowNewmailOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -754,7 +754,7 @@ func (a *UserInterfaceApiService) PostUiOpenwindowNewmail(ctx context.Context, n
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -762,8 +762,8 @@ func (a *UserInterfaceApiService) PostUiOpenwindowNewmail(ctx context.Context, n
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {

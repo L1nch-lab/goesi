@@ -54,17 +54,17 @@ Public information about a character  ---  This route is cached for up to 604800
 */
 
 type GetCharactersCharacterIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterId(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdOpts) (GetCharactersCharacterIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdOk
 	)
 
 	// create path and map variables
@@ -111,7 +111,7 @@ func (a *CharacterApiService) GetCharactersCharacterId(ctx context.Context, char
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -127,8 +127,8 @@ func (a *CharacterApiService) GetCharactersCharacterId(ctx context.Context, char
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -228,18 +228,18 @@ Return a list of agents research information for a character. The formula for fi
 */
 
 type GetCharactersCharacterIdAgentsResearchOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdAgentsResearch(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdAgentsResearchOpts) ([]GetCharactersCharacterIdAgentsResearch200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdAgentsResearch200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdAgentsResearch200OkList
 	)
 
 	// create path and map variables
@@ -289,7 +289,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdAgentsResearch(ctx context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -305,8 +305,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdAgentsResearch(ctx context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -418,19 +418,19 @@ Return a list of blueprints the character owns  ---  This route is cached for up
 */
 
 type GetCharactersCharacterIdBlueprintsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdBlueprints(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdBlueprintsOpts) ([]GetCharactersCharacterIdBlueprints200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdBlueprints200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdBlueprints200OkList
 	)
 
 	// create path and map variables
@@ -483,7 +483,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdBlueprints(ctx context.Con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -499,8 +499,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdBlueprints(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -610,17 +610,17 @@ Get a list of all the corporations a character has been a member of  ---  This r
 */
 
 type GetCharactersCharacterIdCorporationhistoryOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdCorporationhistory(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdCorporationhistoryOpts) ([]GetCharactersCharacterIdCorporationhistory200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdCorporationhistory200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdCorporationhistory200OkList
 	)
 
 	// create path and map variables
@@ -667,7 +667,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdCorporationhistory(ctx con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -683,8 +683,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdCorporationhistory(ctx con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -773,18 +773,18 @@ Return a character&#39;s jump activation and fatigue information  ---  This rout
 */
 
 type GetCharactersCharacterIdFatigueOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdFatigue(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdFatigueOpts) (GetCharactersCharacterIdFatigueOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdFatigueOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdFatigueOk
 	)
 
 	// create path and map variables
@@ -834,7 +834,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdFatigue(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -850,8 +850,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdFatigue(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -962,18 +962,18 @@ Return a list of medals the character has  ---  This route is cached for up to 3
 */
 
 type GetCharactersCharacterIdMedalsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdMedals(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdMedalsOpts) ([]GetCharactersCharacterIdMedals200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdMedals200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdMedals200OkList
 	)
 
 	// create path and map variables
@@ -1023,7 +1023,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdMedals(ctx context.Context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1039,8 +1039,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdMedals(ctx context.Context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1151,18 +1151,18 @@ Return character notifications  ---  This route is cached for up to 600 seconds
 */
 
 type GetCharactersCharacterIdNotificationsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdNotifications(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdNotificationsOpts) ([]GetCharactersCharacterIdNotifications200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdNotifications200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdNotifications200OkList
 	)
 
 	// create path and map variables
@@ -1212,7 +1212,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdNotifications(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1228,8 +1228,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdNotifications(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1340,18 +1340,18 @@ Return notifications about having been added to someone&#39;s contact list  --- 
 */
 
 type GetCharactersCharacterIdNotificationsContactsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdNotificationsContacts(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdNotificationsContactsOpts) ([]GetCharactersCharacterIdNotificationsContacts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdNotificationsContacts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdNotificationsContacts200OkList
 	)
 
 	// create path and map variables
@@ -1401,7 +1401,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdNotificationsContacts(ctx 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1417,8 +1417,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdNotificationsContacts(ctx 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1528,17 +1528,17 @@ Get portrait urls for a character  ---  This route expires daily at 11:05
 */
 
 type GetCharactersCharacterIdPortraitOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdPortrait(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdPortraitOpts) (GetCharactersCharacterIdPortraitOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdPortraitOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdPortraitOk
 	)
 
 	// create path and map variables
@@ -1585,7 +1585,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdPortrait(ctx context.Conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1601,8 +1601,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdPortrait(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1702,18 +1702,18 @@ Returns a character&#39;s corporation roles  ---  This route is cached for up to
 */
 
 type GetCharactersCharacterIdRolesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdRoles(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdRolesOpts) (GetCharactersCharacterIdRolesOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdRolesOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdRolesOk
 	)
 
 	// create path and map variables
@@ -1763,7 +1763,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdRoles(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1779,8 +1779,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdRoles(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1891,18 +1891,18 @@ Return character standings from agents, NPC corporations, and factions  ---  Thi
 */
 
 type GetCharactersCharacterIdStandingsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdStandings(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdStandingsOpts) ([]GetCharactersCharacterIdStandings200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdStandings200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdStandings200OkList
 	)
 
 	// create path and map variables
@@ -1952,7 +1952,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdStandings(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1968,8 +1968,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdStandings(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2080,18 +2080,18 @@ Returns a character&#39;s titles  ---  This route is cached for up to 3600 secon
 */
 
 type GetCharactersCharacterIdTitlesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) GetCharactersCharacterIdTitles(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdTitlesOpts) ([]GetCharactersCharacterIdTitles200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdTitles200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdTitles200OkList
 	)
 
 	// create path and map variables
@@ -2141,7 +2141,7 @@ func (a *CharacterApiService) GetCharactersCharacterIdTitles(ctx context.Context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2157,8 +2157,8 @@ func (a *CharacterApiService) GetCharactersCharacterIdTitles(ctx context.Context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2272,11 +2272,11 @@ type PostCharactersAffiliationOpts struct {
 
 func (a *CharacterApiService) PostCharactersAffiliation(ctx context.Context, characters []int32, localVarOptionals *PostCharactersAffiliationOpts) ([]PostCharactersAffiliation200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostCharactersAffiliation200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostCharactersAffiliation200OkList
 	)
 
 	// create path and map variables
@@ -2318,7 +2318,7 @@ func (a *CharacterApiService) PostCharactersAffiliation(ctx context.Context, cha
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2334,8 +2334,8 @@ func (a *CharacterApiService) PostCharactersAffiliation(ctx context.Context, cha
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2424,17 +2424,17 @@ Takes a source character ID in the url and a set of target character ID&#39;s in
 */
 
 type PostCharactersCharacterIdCspaOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *CharacterApiService) PostCharactersCharacterIdCspa(ctx context.Context, characterId int32, characters []int32, localVarOptionals *PostCharactersCharacterIdCspaOpts) (float32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue float32
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	float32
 	)
 
 	// create path and map variables
@@ -2483,7 +2483,7 @@ func (a *CharacterApiService) PostCharactersCharacterIdCspa(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2499,8 +2499,8 @@ func (a *CharacterApiService) PostCharactersCharacterIdCspa(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {

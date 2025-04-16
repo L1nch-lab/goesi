@@ -56,19 +56,19 @@ Return a list of the characters assets  ---  This route is cached for up to 3600
 */
 
 type GetCharactersCharacterIdAssetsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *AssetsApiService) GetCharactersCharacterIdAssets(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdAssetsOpts) ([]GetCharactersCharacterIdAssets200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdAssets200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdAssets200OkList
 	)
 
 	// create path and map variables
@@ -121,7 +121,7 @@ func (a *AssetsApiService) GetCharactersCharacterIdAssets(ctx context.Context, c
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -137,8 +137,8 @@ func (a *AssetsApiService) GetCharactersCharacterIdAssets(ctx context.Context, c
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -261,19 +261,19 @@ Return a list of the corporation assets  ---  This route is cached for up to 360
 */
 
 type GetCorporationsCorporationIdAssetsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *AssetsApiService) GetCorporationsCorporationIdAssets(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdAssetsOpts) ([]GetCorporationsCorporationIdAssets200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdAssets200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdAssets200OkList
 	)
 
 	// create path and map variables
@@ -326,7 +326,7 @@ func (a *AssetsApiService) GetCorporationsCorporationIdAssets(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -342,8 +342,8 @@ func (a *AssetsApiService) GetCorporationsCorporationIdAssets(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -454,17 +454,17 @@ Return locations for a set of item ids, which you can get from character assets 
 */
 
 type PostCharactersCharacterIdAssetsLocationsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *AssetsApiService) PostCharactersCharacterIdAssetsLocations(ctx context.Context, characterId int32, itemIds []int64, localVarOptionals *PostCharactersCharacterIdAssetsLocationsOpts) ([]PostCharactersCharacterIdAssetsLocations200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostCharactersCharacterIdAssetsLocations200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostCharactersCharacterIdAssetsLocations200OkList
 	)
 
 	// create path and map variables
@@ -513,7 +513,7 @@ func (a *AssetsApiService) PostCharactersCharacterIdAssetsLocations(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -529,8 +529,8 @@ func (a *AssetsApiService) PostCharactersCharacterIdAssetsLocations(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -641,17 +641,17 @@ Return names for a set of item ids, which you can get from character assets endp
 */
 
 type PostCharactersCharacterIdAssetsNamesOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *AssetsApiService) PostCharactersCharacterIdAssetsNames(ctx context.Context, characterId int32, itemIds []int64, localVarOptionals *PostCharactersCharacterIdAssetsNamesOpts) ([]PostCharactersCharacterIdAssetsNames200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostCharactersCharacterIdAssetsNames200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostCharactersCharacterIdAssetsNames200OkList
 	)
 
 	// create path and map variables
@@ -700,7 +700,7 @@ func (a *AssetsApiService) PostCharactersCharacterIdAssetsNames(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -716,8 +716,8 @@ func (a *AssetsApiService) PostCharactersCharacterIdAssetsNames(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -828,17 +828,17 @@ Return locations for a set of item ids, which you can get from corporation asset
 */
 
 type PostCorporationsCorporationIdAssetsLocationsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *AssetsApiService) PostCorporationsCorporationIdAssetsLocations(ctx context.Context, corporationId int32, itemIds []int64, localVarOptionals *PostCorporationsCorporationIdAssetsLocationsOpts) ([]PostCorporationsCorporationIdAssetsLocations200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostCorporationsCorporationIdAssetsLocations200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostCorporationsCorporationIdAssetsLocations200OkList
 	)
 
 	// create path and map variables
@@ -887,7 +887,7 @@ func (a *AssetsApiService) PostCorporationsCorporationIdAssetsLocations(ctx cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -903,8 +903,8 @@ func (a *AssetsApiService) PostCorporationsCorporationIdAssetsLocations(ctx cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1026,17 +1026,17 @@ Return names for a set of item ids, which you can get from corporation assets en
 */
 
 type PostCorporationsCorporationIdAssetsNamesOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *AssetsApiService) PostCorporationsCorporationIdAssetsNames(ctx context.Context, corporationId int32, itemIds []int64, localVarOptionals *PostCorporationsCorporationIdAssetsNamesOpts) ([]PostCorporationsCorporationIdAssetsNames200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostCorporationsCorporationIdAssetsNames200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostCorporationsCorporationIdAssetsNames200OkList
 	)
 
 	// create path and map variables
@@ -1085,7 +1085,7 @@ func (a *AssetsApiService) PostCorporationsCorporationIdAssetsNames(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1101,8 +1101,8 @@ func (a *AssetsApiService) PostCorporationsCorporationIdAssetsNames(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

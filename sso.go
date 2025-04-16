@@ -24,21 +24,21 @@ import (
 
 // [TODO] lose this mutex and allow scopes to change without conflict.
 type SSOAuthenticator struct {
-	httpClient *http.Client
+	httpClient	*http.Client
 	// Hide this...
-	oauthConfig *oauth2.Config
-	scopeLock   sync.Mutex
+	oauthConfig	*oauth2.Config
+	scopeLock	sync.Mutex
 }
 
 // EVESSOClaims structure for JWT Claims
 type EVESSOClaims struct {
-	Name     string   `json:"name,omitempty"`
-	Owner    string   `json:"owner,omitempty"`
-	Scopes   []string `json:"scp,omitempty"`
-	ClientID string   `json:"azp,omitempty"`
-	Tenant   string   `json:"tenant,omitempty"`
-	Tier     string   `json:"tier,omitempty"`
-	Region   string   `json:"region,omitempty"`
+	Name		string		`json:"name,omitempty"`
+	Owner		string		`json:"owner,omitempty"`
+	Scopes		[]string	`json:"scp,omitempty"`
+	ClientID	string		`json:"azp,omitempty"`
+	Tenant		string		`json:"tenant,omitempty"`
+	Tier		string		`json:"tier,omitempty"`
+	Region		string		`json:"region,omitempty"`
 	jwt.RegisteredClaims
 }
 
@@ -53,8 +53,8 @@ func NewSSOAuthenticator(client *http.Client, clientID string, clientSecret stri
 		redirectURL,
 		scopes,
 		oauth2.Endpoint{
-			AuthURL:  "https://login.eveonline.com/oauth/authorize",
-			TokenURL: "https://login.eveonline.com/oauth/token",
+			AuthURL:	"https://login.eveonline.com/oauth/authorize",
+			TokenURL:	"https://login.eveonline.com/oauth/token",
 		},
 	)
 }
@@ -70,8 +70,8 @@ func NewSSOAuthenticatorV2(client *http.Client, clientID string, clientSecret st
 		redirectURL,
 		scopes,
 		oauth2.Endpoint{
-			AuthURL:  "https://login.eveonline.com/v2/oauth/authorize",
-			TokenURL: "https://login.eveonline.com/v2/oauth/token",
+			AuthURL:	"https://login.eveonline.com/v2/oauth/authorize",
+			TokenURL:	"https://login.eveonline.com/v2/oauth/token",
 		},
 	)
 }
@@ -84,11 +84,11 @@ func newSSOAuthenticator(client *http.Client, clientID string, clientSecret stri
 	c := &SSOAuthenticator{}
 	c.httpClient = client
 	c.oauthConfig = &oauth2.Config{
-		ClientID:     clientID,
-		ClientSecret: clientSecret,
-		Endpoint:     endpoint,
-		Scopes:       scopes,
-		RedirectURL:  redirectURL,
+		ClientID:	clientID,
+		ClientSecret:	clientSecret,
+		Endpoint:	endpoint,
+		Scopes:		scopes,
+		RedirectURL:	redirectURL,
 	}
 
 	return c
@@ -124,8 +124,8 @@ func (c *SSOAuthenticator) AuthorizeURL(state string, onlineAccess bool, scopes 
 // TokenRevoke revokes a refresh token
 func (c *SSOAuthenticator) TokenRevoke(refreshToken string) error {
 	v := url.Values{
-		"token_type_hint": {"refresh_token"},
-		"token":           {refreshToken},
+		"token_type_hint":	{"refresh_token"},
+		"token":		{refreshToken},
 	}
 	req, err := http.NewRequest("POST", "https://login.eveonline.com/oauth/revoke", strings.NewReader(v.Encode()))
 	if err != nil {
@@ -143,14 +143,14 @@ func (c *SSOAuthenticator) TokenRevoke(refreshToken string) error {
 		return err
 	}
 	defer r.Body.Close()
-	body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1<<20))
+	body, err := io.ReadAll(io.LimitReader(r.Body, 1<<20))
 	if err != nil {
 		return fmt.Errorf("oauth2: cannot revoke token: %v", err)
 	}
 	if code := r.StatusCode; code < 200 || code > 299 {
 		return &oauth2.RetrieveError{
-			Response: r,
-			Body:     body,
+			Response:	r,
+			Body:		body,
 		}
 	}
 	return nil
@@ -173,12 +173,12 @@ func (c *SSOAuthenticator) TokenSource(token *oauth2.Token) oauth2.TokenSource {
 }
 
 type VerifyResponse struct {
-	CharacterID        int32
-	CharacterName      string
-	ExpiresOn          string
-	Scopes             string
-	TokenType          string
-	CharacterOwnerHash string
+	CharacterID		int32
+	CharacterName		string
+	ExpiresOn		string
+	Scopes			string
+	TokenType		string
+	CharacterOwnerHash	string
 }
 
 // Verify the client and collect user information.
@@ -238,7 +238,7 @@ func (c *SSOAuthenticator) doJSON(method, urlStr string, body interface{}, v int
 	}
 
 	defer res.Body.Close()
-	buf, err := ioutil.ReadAll(res.Body)
+	buf, err := io.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}

@@ -55,18 +55,18 @@ Return a list of loyalty points for all corporations the character has worked fo
 */
 
 type GetCharactersCharacterIdLoyaltyPointsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *LoyaltyApiService) GetCharactersCharacterIdLoyaltyPoints(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdLoyaltyPointsOpts) ([]GetCharactersCharacterIdLoyaltyPoints200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdLoyaltyPoints200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdLoyaltyPoints200OkList
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *LoyaltyApiService) GetCharactersCharacterIdLoyaltyPoints(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *LoyaltyApiService) GetCharactersCharacterIdLoyaltyPoints(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -243,17 +243,17 @@ Return a list of offers from a specific corporation&#39;s loyalty store  ---  Th
 */
 
 type GetLoyaltyStoresCorporationIdOffersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *LoyaltyApiService) GetLoyaltyStoresCorporationIdOffers(ctx context.Context, corporationId int32, localVarOptionals *GetLoyaltyStoresCorporationIdOffersOpts) ([]GetLoyaltyStoresCorporationIdOffers200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetLoyaltyStoresCorporationIdOffers200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetLoyaltyStoresCorporationIdOffers200OkList
 	)
 
 	// create path and map variables
@@ -300,7 +300,7 @@ func (a *LoyaltyApiService) GetLoyaltyStoresCorporationIdOffers(ctx context.Cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -316,8 +316,8 @@ func (a *LoyaltyApiService) GetLoyaltyStoresCorporationIdOffers(ctx context.Cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

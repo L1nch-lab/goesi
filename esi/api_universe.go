@@ -55,19 +55,19 @@ Get all character ancestries  ---  This route expires daily at 11:05
 */
 
 type GetUniverseAncestriesOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseAncestries(ctx context.Context, localVarOptionals *GetUniverseAncestriesOpts) ([]GetUniverseAncestries200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseAncestries200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseAncestries200OkList
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *UniverseApiService) GetUniverseAncestries(ctx context.Context, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *UniverseApiService) GetUniverseAncestries(ctx context.Context, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -221,17 +221,17 @@ Get information on an asteroid belt  ---  This route expires daily at 11:05
 */
 
 type GetUniverseAsteroidBeltsAsteroidBeltIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseAsteroidBeltsAsteroidBeltId(ctx context.Context, asteroidBeltId int32, localVarOptionals *GetUniverseAsteroidBeltsAsteroidBeltIdOpts) (GetUniverseAsteroidBeltsAsteroidBeltIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseAsteroidBeltsAsteroidBeltIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseAsteroidBeltsAsteroidBeltIdOk
 	)
 
 	// create path and map variables
@@ -275,7 +275,7 @@ func (a *UniverseApiService) GetUniverseAsteroidBeltsAsteroidBeltId(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -291,8 +291,8 @@ func (a *UniverseApiService) GetUniverseAsteroidBeltsAsteroidBeltId(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -392,19 +392,19 @@ Get a list of bloodlines  ---  This route expires daily at 11:05
 */
 
 type GetUniverseBloodlinesOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseBloodlines(ctx context.Context, localVarOptionals *GetUniverseBloodlinesOpts) ([]GetUniverseBloodlines200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseBloodlines200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseBloodlines200OkList
 	)
 
 	// create path and map variables
@@ -453,7 +453,7 @@ func (a *UniverseApiService) GetUniverseBloodlines(ctx context.Context, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -469,8 +469,8 @@ func (a *UniverseApiService) GetUniverseBloodlines(ctx context.Context, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -557,17 +557,17 @@ Get a list of item categories  ---  This route expires daily at 11:05
 */
 
 type GetUniverseCategoriesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseCategories(ctx context.Context, localVarOptionals *GetUniverseCategoriesOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -610,7 +610,7 @@ func (a *UniverseApiService) GetUniverseCategories(ctx context.Context, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -626,8 +626,8 @@ func (a *UniverseApiService) GetUniverseCategories(ctx context.Context, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -717,19 +717,19 @@ Get information of an item category  ---  This route expires daily at 11:05
 */
 
 type GetUniverseCategoriesCategoryIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseCategoriesCategoryId(ctx context.Context, categoryId int32, localVarOptionals *GetUniverseCategoriesCategoryIdOpts) (GetUniverseCategoriesCategoryIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseCategoriesCategoryIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseCategoriesCategoryIdOk
 	)
 
 	// create path and map variables
@@ -779,7 +779,7 @@ func (a *UniverseApiService) GetUniverseCategoriesCategoryId(ctx context.Context
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -795,8 +795,8 @@ func (a *UniverseApiService) GetUniverseCategoriesCategoryId(ctx context.Context
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -894,17 +894,17 @@ Get a list of constellations  ---  This route expires daily at 11:05
 */
 
 type GetUniverseConstellationsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseConstellations(ctx context.Context, localVarOptionals *GetUniverseConstellationsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -947,7 +947,7 @@ func (a *UniverseApiService) GetUniverseConstellations(ctx context.Context, loca
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -963,8 +963,8 @@ func (a *UniverseApiService) GetUniverseConstellations(ctx context.Context, loca
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1054,19 +1054,19 @@ Get information on a constellation  ---  This route expires daily at 11:05
 */
 
 type GetUniverseConstellationsConstellationIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseConstellationsConstellationId(ctx context.Context, constellationId int32, localVarOptionals *GetUniverseConstellationsConstellationIdOpts) (GetUniverseConstellationsConstellationIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseConstellationsConstellationIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseConstellationsConstellationIdOk
 	)
 
 	// create path and map variables
@@ -1116,7 +1116,7 @@ func (a *UniverseApiService) GetUniverseConstellationsConstellationId(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1132,8 +1132,8 @@ func (a *UniverseApiService) GetUniverseConstellationsConstellationId(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1233,19 +1233,19 @@ Get a list of factions  ---  This route expires daily at 11:05
 */
 
 type GetUniverseFactionsOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseFactions(ctx context.Context, localVarOptionals *GetUniverseFactionsOpts) ([]GetUniverseFactions200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseFactions200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseFactions200OkList
 	)
 
 	// create path and map variables
@@ -1294,7 +1294,7 @@ func (a *UniverseApiService) GetUniverseFactions(ctx context.Context, localVarOp
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1310,8 +1310,8 @@ func (a *UniverseApiService) GetUniverseFactions(ctx context.Context, localVarOp
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1398,17 +1398,17 @@ Get a list of graphics  ---  This route expires daily at 11:05
 */
 
 type GetUniverseGraphicsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseGraphics(ctx context.Context, localVarOptionals *GetUniverseGraphicsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -1451,7 +1451,7 @@ func (a *UniverseApiService) GetUniverseGraphics(ctx context.Context, localVarOp
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1467,8 +1467,8 @@ func (a *UniverseApiService) GetUniverseGraphics(ctx context.Context, localVarOp
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1556,17 +1556,17 @@ Get information on a graphic  ---  This route expires daily at 11:05
 */
 
 type GetUniverseGraphicsGraphicIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseGraphicsGraphicId(ctx context.Context, graphicId int32, localVarOptionals *GetUniverseGraphicsGraphicIdOpts) (GetUniverseGraphicsGraphicIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseGraphicsGraphicIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseGraphicsGraphicIdOk
 	)
 
 	// create path and map variables
@@ -1610,7 +1610,7 @@ func (a *UniverseApiService) GetUniverseGraphicsGraphicId(ctx context.Context, g
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1626,8 +1626,8 @@ func (a *UniverseApiService) GetUniverseGraphicsGraphicId(ctx context.Context, g
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1726,18 +1726,18 @@ Get a list of item groups  ---  This route expires daily at 11:05
 */
 
 type GetUniverseGroupsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *UniverseApiService) GetUniverseGroups(ctx context.Context, localVarOptionals *GetUniverseGroupsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -1783,7 +1783,7 @@ func (a *UniverseApiService) GetUniverseGroups(ctx context.Context, localVarOpti
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1799,8 +1799,8 @@ func (a *UniverseApiService) GetUniverseGroups(ctx context.Context, localVarOpti
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1890,19 +1890,19 @@ Get information on an item group  ---  This route expires daily at 11:05
 */
 
 type GetUniverseGroupsGroupIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseGroupsGroupId(ctx context.Context, groupId int32, localVarOptionals *GetUniverseGroupsGroupIdOpts) (GetUniverseGroupsGroupIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseGroupsGroupIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseGroupsGroupIdOk
 	)
 
 	// create path and map variables
@@ -1952,7 +1952,7 @@ func (a *UniverseApiService) GetUniverseGroupsGroupId(ctx context.Context, group
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1968,8 +1968,8 @@ func (a *UniverseApiService) GetUniverseGroupsGroupId(ctx context.Context, group
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2068,17 +2068,17 @@ Get information on a moon  ---  This route expires daily at 11:05
 */
 
 type GetUniverseMoonsMoonIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseMoonsMoonId(ctx context.Context, moonId int32, localVarOptionals *GetUniverseMoonsMoonIdOpts) (GetUniverseMoonsMoonIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseMoonsMoonIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseMoonsMoonIdOk
 	)
 
 	// create path and map variables
@@ -2122,7 +2122,7 @@ func (a *UniverseApiService) GetUniverseMoonsMoonId(ctx context.Context, moonId 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2138,8 +2138,8 @@ func (a *UniverseApiService) GetUniverseMoonsMoonId(ctx context.Context, moonId 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2238,17 +2238,17 @@ Get information on a planet  ---  This route expires daily at 11:05
 */
 
 type GetUniversePlanetsPlanetIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniversePlanetsPlanetId(ctx context.Context, planetId int32, localVarOptionals *GetUniversePlanetsPlanetIdOpts) (GetUniversePlanetsPlanetIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniversePlanetsPlanetIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniversePlanetsPlanetIdOk
 	)
 
 	// create path and map variables
@@ -2292,7 +2292,7 @@ func (a *UniverseApiService) GetUniversePlanetsPlanetId(ctx context.Context, pla
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2308,8 +2308,8 @@ func (a *UniverseApiService) GetUniversePlanetsPlanetId(ctx context.Context, pla
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2409,19 +2409,19 @@ Get a list of character races  ---  This route expires daily at 11:05
 */
 
 type GetUniverseRacesOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseRaces(ctx context.Context, localVarOptionals *GetUniverseRacesOpts) ([]GetUniverseRaces200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseRaces200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseRaces200OkList
 	)
 
 	// create path and map variables
@@ -2470,7 +2470,7 @@ func (a *UniverseApiService) GetUniverseRaces(ctx context.Context, localVarOptio
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2486,8 +2486,8 @@ func (a *UniverseApiService) GetUniverseRaces(ctx context.Context, localVarOptio
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2574,17 +2574,17 @@ Get a list of regions  ---  This route expires daily at 11:05
 */
 
 type GetUniverseRegionsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseRegions(ctx context.Context, localVarOptionals *GetUniverseRegionsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -2627,7 +2627,7 @@ func (a *UniverseApiService) GetUniverseRegions(ctx context.Context, localVarOpt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2643,8 +2643,8 @@ func (a *UniverseApiService) GetUniverseRegions(ctx context.Context, localVarOpt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2734,19 +2734,19 @@ Get information on a region  ---  This route expires daily at 11:05
 */
 
 type GetUniverseRegionsRegionIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseRegionsRegionId(ctx context.Context, regionId int32, localVarOptionals *GetUniverseRegionsRegionIdOpts) (GetUniverseRegionsRegionIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseRegionsRegionIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseRegionsRegionIdOk
 	)
 
 	// create path and map variables
@@ -2796,7 +2796,7 @@ func (a *UniverseApiService) GetUniverseRegionsRegionId(ctx context.Context, reg
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2812,8 +2812,8 @@ func (a *UniverseApiService) GetUniverseRegionsRegionId(ctx context.Context, reg
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -2912,17 +2912,17 @@ Get information on a stargate  ---  This route expires daily at 11:05
 */
 
 type GetUniverseStargatesStargateIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseStargatesStargateId(ctx context.Context, stargateId int32, localVarOptionals *GetUniverseStargatesStargateIdOpts) (GetUniverseStargatesStargateIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseStargatesStargateIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseStargatesStargateIdOk
 	)
 
 	// create path and map variables
@@ -2966,7 +2966,7 @@ func (a *UniverseApiService) GetUniverseStargatesStargateId(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -2982,8 +2982,8 @@ func (a *UniverseApiService) GetUniverseStargatesStargateId(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3082,17 +3082,17 @@ Get information on a star  ---  This route expires daily at 11:05
 */
 
 type GetUniverseStarsStarIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseStarsStarId(ctx context.Context, starId int32, localVarOptionals *GetUniverseStarsStarIdOpts) (GetUniverseStarsStarIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseStarsStarIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseStarsStarIdOk
 	)
 
 	// create path and map variables
@@ -3136,7 +3136,7 @@ func (a *UniverseApiService) GetUniverseStarsStarId(ctx context.Context, starId 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3152,8 +3152,8 @@ func (a *UniverseApiService) GetUniverseStarsStarId(ctx context.Context, starId 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3241,17 +3241,17 @@ Get information on a station  ---  This route expires daily at 11:05
 */
 
 type GetUniverseStationsStationIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseStationsStationId(ctx context.Context, stationId int32, localVarOptionals *GetUniverseStationsStationIdOpts) (GetUniverseStationsStationIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseStationsStationIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseStationsStationIdOk
 	)
 
 	// create path and map variables
@@ -3295,7 +3295,7 @@ func (a *UniverseApiService) GetUniverseStationsStationId(ctx context.Context, s
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3311,8 +3311,8 @@ func (a *UniverseApiService) GetUniverseStationsStationId(ctx context.Context, s
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3411,18 +3411,18 @@ List all public structures  ---  This route is cached for up to 3600 seconds
 */
 
 type GetUniverseStructuresOpts struct {
-	Datasource  optional.String
-	Filter      optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	Filter		optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseStructures(ctx context.Context, localVarOptionals *GetUniverseStructuresOpts) ([]int64, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int64
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int64
 	)
 
 	// create path and map variables
@@ -3468,7 +3468,7 @@ func (a *UniverseApiService) GetUniverseStructures(ctx context.Context, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3484,8 +3484,8 @@ func (a *UniverseApiService) GetUniverseStructures(ctx context.Context, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3574,18 +3574,18 @@ Returns information on requested structure if you are on the ACL. Otherwise, ret
 */
 
 type GetUniverseStructuresStructureIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *UniverseApiService) GetUniverseStructuresStructureId(ctx context.Context, structureId int64, localVarOptionals *GetUniverseStructuresStructureIdOpts) (GetUniverseStructuresStructureIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseStructuresStructureIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseStructuresStructureIdOk
 	)
 
 	// create path and map variables
@@ -3632,7 +3632,7 @@ func (a *UniverseApiService) GetUniverseStructuresStructureId(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3648,8 +3648,8 @@ func (a *UniverseApiService) GetUniverseStructuresStructureId(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3769,17 +3769,17 @@ Get the number of jumps in solar systems within the last hour ending at the time
 */
 
 type GetUniverseSystemJumpsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseSystemJumps(ctx context.Context, localVarOptionals *GetUniverseSystemJumpsOpts) ([]GetUniverseSystemJumps200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseSystemJumps200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseSystemJumps200OkList
 	)
 
 	// create path and map variables
@@ -3822,7 +3822,7 @@ func (a *UniverseApiService) GetUniverseSystemJumps(ctx context.Context, localVa
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3838,8 +3838,8 @@ func (a *UniverseApiService) GetUniverseSystemJumps(ctx context.Context, localVa
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -3926,17 +3926,17 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 */
 
 type GetUniverseSystemKillsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseSystemKills(ctx context.Context, localVarOptionals *GetUniverseSystemKillsOpts) ([]GetUniverseSystemKills200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseSystemKills200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseSystemKills200OkList
 	)
 
 	// create path and map variables
@@ -3979,7 +3979,7 @@ func (a *UniverseApiService) GetUniverseSystemKills(ctx context.Context, localVa
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -3995,8 +3995,8 @@ func (a *UniverseApiService) GetUniverseSystemKills(ctx context.Context, localVa
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4083,17 +4083,17 @@ Get a list of solar systems  ---  This route expires daily at 11:05
 */
 
 type GetUniverseSystemsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseSystems(ctx context.Context, localVarOptionals *GetUniverseSystemsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -4136,7 +4136,7 @@ func (a *UniverseApiService) GetUniverseSystems(ctx context.Context, localVarOpt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4152,8 +4152,8 @@ func (a *UniverseApiService) GetUniverseSystems(ctx context.Context, localVarOpt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4243,19 +4243,19 @@ Get information on a solar system.  ---  This route expires daily at 11:05
 */
 
 type GetUniverseSystemsSystemIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseSystemsSystemId(ctx context.Context, systemId int32, localVarOptionals *GetUniverseSystemsSystemIdOpts) (GetUniverseSystemsSystemIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseSystemsSystemIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseSystemsSystemIdOk
 	)
 
 	// create path and map variables
@@ -4305,7 +4305,7 @@ func (a *UniverseApiService) GetUniverseSystemsSystemId(ctx context.Context, sys
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4321,8 +4321,8 @@ func (a *UniverseApiService) GetUniverseSystemsSystemId(ctx context.Context, sys
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4421,18 +4421,18 @@ Get a list of type ids  ---  This route expires daily at 11:05
 */
 
 type GetUniverseTypesOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *UniverseApiService) GetUniverseTypes(ctx context.Context, localVarOptionals *GetUniverseTypesOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -4478,7 +4478,7 @@ func (a *UniverseApiService) GetUniverseTypes(ctx context.Context, localVarOptio
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4494,8 +4494,8 @@ func (a *UniverseApiService) GetUniverseTypes(ctx context.Context, localVarOptio
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4585,19 +4585,19 @@ Get information on a type  ---  This route expires daily at 11:05
 */
 
 type GetUniverseTypesTypeIdOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	IfNoneMatch    optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) GetUniverseTypesTypeId(ctx context.Context, typeId int32, localVarOptionals *GetUniverseTypesTypeIdOpts) (GetUniverseTypesTypeIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetUniverseTypesTypeIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetUniverseTypesTypeIdOk
 	)
 
 	// create path and map variables
@@ -4647,7 +4647,7 @@ func (a *UniverseApiService) GetUniverseTypesTypeId(ctx context.Context, typeId 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4663,8 +4663,8 @@ func (a *UniverseApiService) GetUniverseTypesTypeId(ctx context.Context, typeId 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4764,18 +4764,18 @@ Resolve a set of names to IDs in the following categories: agents, alliances, ch
 */
 
 type PostUniverseIdsOpts struct {
-	AcceptLanguage optional.String
-	Datasource     optional.String
-	Language       optional.String
+	AcceptLanguage	optional.String
+	Datasource	optional.String
+	Language	optional.String
 }
 
 func (a *UniverseApiService) PostUniverseIds(ctx context.Context, names []string, localVarOptionals *PostUniverseIdsOpts) (PostUniverseIdsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostUniverseIdsOk
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostUniverseIdsOk
 	)
 
 	// create path and map variables
@@ -4823,7 +4823,7 @@ func (a *UniverseApiService) PostUniverseIds(ctx context.Context, names []string
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4839,8 +4839,8 @@ func (a *UniverseApiService) PostUniverseIds(ctx context.Context, names []string
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -4932,11 +4932,11 @@ type PostUniverseNamesOpts struct {
 
 func (a *UniverseApiService) PostUniverseNames(ctx context.Context, ids []int32, localVarOptionals *PostUniverseNamesOpts) ([]PostUniverseNames200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue PostUniverseNames200OkList
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	PostUniverseNames200OkList
 	)
 
 	// create path and map variables
@@ -4978,7 +4978,7 @@ func (a *UniverseApiService) PostUniverseNames(ctx context.Context, ids []int32,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -4994,8 +4994,8 @@ func (a *UniverseApiService) PostUniverseNames(ctx context.Context, ids []int32,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

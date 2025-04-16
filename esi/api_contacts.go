@@ -55,16 +55,16 @@ Bulk delete contacts  ---
 */
 
 type DeleteCharactersCharacterIdContactsOpts struct {
-	Datasource optional.String
-	Token      optional.String
+	Datasource	optional.String
+	Token		optional.String
 }
 
 func (a *ContactsApiService) DeleteCharactersCharacterIdContacts(ctx context.Context, characterId int32, contactIds []int32, localVarOptionals *DeleteCharactersCharacterIdContactsOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Delete")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -118,7 +118,7 @@ func (a *ContactsApiService) DeleteCharactersCharacterIdContacts(ctx context.Con
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -126,8 +126,8 @@ func (a *ContactsApiService) DeleteCharactersCharacterIdContacts(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {
@@ -228,19 +228,19 @@ Return contacts of an alliance  ---  This route is cached for up to 300 seconds
 */
 
 type GetAlliancesAllianceIdContactsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetAlliancesAllianceIdContacts(ctx context.Context, allianceId int32, localVarOptionals *GetAlliancesAllianceIdContactsOpts) ([]GetAlliancesAllianceIdContacts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetAlliancesAllianceIdContacts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetAlliancesAllianceIdContacts200OkList
 	)
 
 	// create path and map variables
@@ -293,7 +293,7 @@ func (a *ContactsApiService) GetAlliancesAllianceIdContacts(ctx context.Context,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -309,8 +309,8 @@ func (a *ContactsApiService) GetAlliancesAllianceIdContacts(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -421,18 +421,18 @@ Return custom labels for an alliance&#39;s contacts  ---  This route is cached f
 */
 
 type GetAlliancesAllianceIdContactsLabelsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetAlliancesAllianceIdContactsLabels(ctx context.Context, allianceId int32, localVarOptionals *GetAlliancesAllianceIdContactsLabelsOpts) ([]GetAlliancesAllianceIdContactsLabels200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetAlliancesAllianceIdContactsLabels200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetAlliancesAllianceIdContactsLabels200OkList
 	)
 
 	// create path and map variables
@@ -482,7 +482,7 @@ func (a *ContactsApiService) GetAlliancesAllianceIdContactsLabels(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -498,8 +498,8 @@ func (a *ContactsApiService) GetAlliancesAllianceIdContactsLabels(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -611,19 +611,19 @@ Return contacts of a character  ---  This route is cached for up to 300 seconds
 */
 
 type GetCharactersCharacterIdContactsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetCharactersCharacterIdContacts(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdContactsOpts) ([]GetCharactersCharacterIdContacts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdContacts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdContacts200OkList
 	)
 
 	// create path and map variables
@@ -676,7 +676,7 @@ func (a *ContactsApiService) GetCharactersCharacterIdContacts(ctx context.Contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -692,8 +692,8 @@ func (a *ContactsApiService) GetCharactersCharacterIdContacts(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -804,18 +804,18 @@ Return custom labels for a character&#39;s contacts  ---  This route is cached f
 */
 
 type GetCharactersCharacterIdContactsLabelsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetCharactersCharacterIdContactsLabels(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdContactsLabelsOpts) ([]GetCharactersCharacterIdContactsLabels200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdContactsLabels200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdContactsLabels200OkList
 	)
 
 	// create path and map variables
@@ -865,7 +865,7 @@ func (a *ContactsApiService) GetCharactersCharacterIdContactsLabels(ctx context.
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -881,8 +881,8 @@ func (a *ContactsApiService) GetCharactersCharacterIdContactsLabels(ctx context.
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -994,19 +994,19 @@ Return contacts of a corporation  ---  This route is cached for up to 300 second
 */
 
 type GetCorporationsCorporationIdContactsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetCorporationsCorporationIdContacts(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContactsOpts) ([]GetCorporationsCorporationIdContacts200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContacts200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContacts200OkList
 	)
 
 	// create path and map variables
@@ -1059,7 +1059,7 @@ func (a *ContactsApiService) GetCorporationsCorporationIdContacts(ctx context.Co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1075,8 +1075,8 @@ func (a *ContactsApiService) GetCorporationsCorporationIdContacts(ctx context.Co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1187,18 +1187,18 @@ Return custom labels for a corporation&#39;s contacts  ---  This route is cached
 */
 
 type GetCorporationsCorporationIdContactsLabelsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *ContactsApiService) GetCorporationsCorporationIdContactsLabels(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdContactsLabelsOpts) ([]GetCorporationsCorporationIdContactsLabels200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdContactsLabels200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdContactsLabels200OkList
 	)
 
 	// create path and map variables
@@ -1248,7 +1248,7 @@ func (a *ContactsApiService) GetCorporationsCorporationIdContactsLabels(ctx cont
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1264,8 +1264,8 @@ func (a *ContactsApiService) GetCorporationsCorporationIdContactsLabels(ctx cont
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1379,19 +1379,19 @@ Bulk add contacts with same settings  ---
 */
 
 type PostCharactersCharacterIdContactsOpts struct {
-	Datasource optional.String
-	LabelIds   optional.Interface
-	Token      optional.String
-	Watched    optional.Bool
+	Datasource	optional.String
+	LabelIds	optional.Interface
+	Token		optional.String
+	Watched		optional.Bool
 }
 
 func (a *ContactsApiService) PostCharactersCharacterIdContacts(ctx context.Context, characterId int32, contactIds []int32, standing float32, localVarOptionals *PostCharactersCharacterIdContactsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Post")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Post")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -1453,7 +1453,7 @@ func (a *ContactsApiService) PostCharactersCharacterIdContacts(ctx context.Conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1469,8 +1469,8 @@ func (a *ContactsApiService) PostCharactersCharacterIdContacts(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 201 {
@@ -1595,18 +1595,18 @@ Bulk edit contacts with same settings  ---
 */
 
 type PutCharactersCharacterIdContactsOpts struct {
-	Datasource optional.String
-	LabelIds   optional.Interface
-	Token      optional.String
-	Watched    optional.Bool
+	Datasource	optional.String
+	LabelIds	optional.Interface
+	Token		optional.String
+	Watched		optional.Bool
 }
 
 func (a *ContactsApiService) PutCharactersCharacterIdContacts(ctx context.Context, characterId int32, contactIds []int32, standing float32, localVarOptionals *PutCharactersCharacterIdContactsOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod	= strings.ToUpper("Put")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
 	)
 
 	// create path and map variables
@@ -1668,7 +1668,7 @@ func (a *ContactsApiService) PutCharactersCharacterIdContacts(ctx context.Contex
 		return localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarHttpResponse, err
@@ -1676,8 +1676,8 @@ func (a *ContactsApiService) PutCharactersCharacterIdContacts(ctx context.Contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 400 {

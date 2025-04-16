@@ -48,11 +48,11 @@ Echo the request headers for debugging purposes. Note that the &#39;Connection&#
 */
 func (a *MetaApiService) GetHeaders(ctx context.Context) (map[string]string, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue map[string]string
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	map[string]string
 	)
 
 	// create path and map variables
@@ -89,7 +89,7 @@ func (a *MetaApiService) GetHeaders(ctx context.Context) (map[string]string, *ht
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -105,8 +105,8 @@ func (a *MetaApiService) GetHeaders(ctx context.Context) (map[string]string, *ht
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -135,11 +135,11 @@ Ping the ESI routers
 */
 func (a *MetaApiService) GetPing(ctx context.Context) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue string
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	string
 	)
 
 	// create path and map variables
@@ -176,7 +176,7 @@ func (a *MetaApiService) GetPing(ctx context.Context) (string, *http.Response, e
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -192,8 +192,8 @@ func (a *MetaApiService) GetPing(ctx context.Context) (string, *http.Response, e
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -229,11 +229,11 @@ type GetStatusOpts struct {
 
 func (a *MetaApiService) GetStatus(ctx context.Context, localVarOptionals *GetStatusOpts) ([]GetStatusItem, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetStatusItemList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetStatusItemList
 	)
 
 	// create path and map variables
@@ -273,7 +273,7 @@ func (a *MetaApiService) GetStatus(ctx context.Context, localVarOptionals *GetSt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -289,8 +289,8 @@ func (a *MetaApiService) GetStatus(ctx context.Context, localVarOptionals *GetSt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -336,20 +336,20 @@ Verify authorization tokens in ESI&#39;s auth cache
 */
 
 type GetVerifyOpts struct {
-	UserAgent     optional.String
-	XUserAgent    optional.String
-	Datasource    optional.String
-	Token         optional.String
-	Authorization optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
+	Token		optional.String
+	Authorization	optional.String
 }
 
 func (a *MetaApiService) GetVerify(ctx context.Context, localVarOptionals *GetVerifyOpts) (GetVerifyOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetVerifyOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetVerifyOk
 	)
 
 	// create path and map variables
@@ -401,7 +401,7 @@ func (a *MetaApiService) GetVerify(ctx context.Context, localVarOptionals *GetVe
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -417,8 +417,8 @@ func (a *MetaApiService) GetVerify(ctx context.Context, localVarOptionals *GetVe
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -483,17 +483,17 @@ List all endpoint versions
 */
 
 type GetVersionsOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
 }
 
 func (a *MetaApiService) GetVersions(ctx context.Context, localVarOptionals *GetVersionsOpts) ([]string, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []string
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]string
 	)
 
 	// create path and map variables
@@ -536,7 +536,7 @@ func (a *MetaApiService) GetVersions(ctx context.Context, localVarOptionals *Get
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -552,8 +552,8 @@ func (a *MetaApiService) GetVersions(ctx context.Context, localVarOptionals *Get
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

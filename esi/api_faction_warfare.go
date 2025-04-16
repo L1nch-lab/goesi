@@ -55,18 +55,18 @@ Statistical overview of a character involved in faction warfare  ---  This route
 */
 
 type GetCharactersCharacterIdFwStatsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *FactionWarfareApiService) GetCharactersCharacterIdFwStats(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdFwStatsOpts) (GetCharactersCharacterIdFwStatsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdFwStatsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdFwStatsOk
 	)
 
 	// create path and map variables
@@ -116,7 +116,7 @@ func (a *FactionWarfareApiService) GetCharactersCharacterIdFwStats(ctx context.C
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -132,8 +132,8 @@ func (a *FactionWarfareApiService) GetCharactersCharacterIdFwStats(ctx context.C
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -244,18 +244,18 @@ Statistics about a corporation involved in faction warfare  ---  This route expi
 */
 
 type GetCorporationsCorporationIdFwStatsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Token		optional.String
 }
 
 func (a *FactionWarfareApiService) GetCorporationsCorporationIdFwStats(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdFwStatsOpts) (GetCorporationsCorporationIdFwStatsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdFwStatsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdFwStatsOk
 	)
 
 	// create path and map variables
@@ -305,7 +305,7 @@ func (a *FactionWarfareApiService) GetCorporationsCorporationIdFwStats(ctx conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -321,8 +321,8 @@ func (a *FactionWarfareApiService) GetCorporationsCorporationIdFwStats(ctx conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -431,17 +431,17 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 */
 
 type GetFwLeaderboardsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwLeaderboards(ctx context.Context, localVarOptionals *GetFwLeaderboardsOpts) (GetFwLeaderboardsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwLeaderboardsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwLeaderboardsOk
 	)
 
 	// create path and map variables
@@ -484,7 +484,7 @@ func (a *FactionWarfareApiService) GetFwLeaderboards(ctx context.Context, localV
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -500,8 +500,8 @@ func (a *FactionWarfareApiService) GetFwLeaderboards(ctx context.Context, localV
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -588,17 +588,17 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 */
 
 type GetFwLeaderboardsCharactersOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwLeaderboardsCharacters(ctx context.Context, localVarOptionals *GetFwLeaderboardsCharactersOpts) (GetFwLeaderboardsCharactersOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwLeaderboardsCharactersOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwLeaderboardsCharactersOk
 	)
 
 	// create path and map variables
@@ -641,7 +641,7 @@ func (a *FactionWarfareApiService) GetFwLeaderboardsCharacters(ctx context.Conte
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -657,8 +657,8 @@ func (a *FactionWarfareApiService) GetFwLeaderboardsCharacters(ctx context.Conte
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -745,17 +745,17 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 */
 
 type GetFwLeaderboardsCorporationsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwLeaderboardsCorporations(ctx context.Context, localVarOptionals *GetFwLeaderboardsCorporationsOpts) (GetFwLeaderboardsCorporationsOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwLeaderboardsCorporationsOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwLeaderboardsCorporationsOk
 	)
 
 	// create path and map variables
@@ -798,7 +798,7 @@ func (a *FactionWarfareApiService) GetFwLeaderboardsCorporations(ctx context.Con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -814,8 +814,8 @@ func (a *FactionWarfareApiService) GetFwLeaderboardsCorporations(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -902,17 +902,17 @@ Statistical overviews of factions involved in faction warfare  ---  This route e
 */
 
 type GetFwStatsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwStats(ctx context.Context, localVarOptionals *GetFwStatsOpts) ([]GetFwStats200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwStats200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwStats200OkList
 	)
 
 	// create path and map variables
@@ -955,7 +955,7 @@ func (a *FactionWarfareApiService) GetFwStats(ctx context.Context, localVarOptio
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -971,8 +971,8 @@ func (a *FactionWarfareApiService) GetFwStats(ctx context.Context, localVarOptio
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1059,17 +1059,17 @@ An overview of the current ownership of faction warfare solar systems  ---  This
 */
 
 type GetFwSystemsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwSystems(ctx context.Context, localVarOptionals *GetFwSystemsOpts) ([]GetFwSystems200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwSystems200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwSystems200OkList
 	)
 
 	// create path and map variables
@@ -1112,7 +1112,7 @@ func (a *FactionWarfareApiService) GetFwSystems(ctx context.Context, localVarOpt
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1128,8 +1128,8 @@ func (a *FactionWarfareApiService) GetFwSystems(ctx context.Context, localVarOpt
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1216,17 +1216,17 @@ Data about which NPC factions are at war  ---  This route expires daily at 11:05
 */
 
 type GetFwWarsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *FactionWarfareApiService) GetFwWars(ctx context.Context, localVarOptionals *GetFwWarsOpts) ([]GetFwWars200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetFwWars200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetFwWars200OkList
 	)
 
 	// create path and map variables
@@ -1269,7 +1269,7 @@ func (a *FactionWarfareApiService) GetFwWars(ctx context.Context, localVarOption
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1285,8 +1285,8 @@ func (a *FactionWarfareApiService) GetFwWars(ctx context.Context, localVarOption
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

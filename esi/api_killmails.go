@@ -56,19 +56,19 @@ Return a list of a character&#39;s kills and losses going back 90 days  ---  Thi
 */
 
 type GetCharactersCharacterIdKillmailsRecentOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *KillmailsApiService) GetCharactersCharacterIdKillmailsRecent(ctx context.Context, characterId int32, localVarOptionals *GetCharactersCharacterIdKillmailsRecentOpts) ([]GetCharactersCharacterIdKillmailsRecent200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCharactersCharacterIdKillmailsRecent200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCharactersCharacterIdKillmailsRecent200OkList
 	)
 
 	// create path and map variables
@@ -121,7 +121,7 @@ func (a *KillmailsApiService) GetCharactersCharacterIdKillmailsRecent(ctx contex
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -137,8 +137,8 @@ func (a *KillmailsApiService) GetCharactersCharacterIdKillmailsRecent(ctx contex
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -250,19 +250,19 @@ Get a list of a corporation&#39;s kills and losses going back 90 days  ---  This
 */
 
 type GetCorporationsCorporationIdKillmailsRecentOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
-	Token       optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
+	Token		optional.String
 }
 
 func (a *KillmailsApiService) GetCorporationsCorporationIdKillmailsRecent(ctx context.Context, corporationId int32, localVarOptionals *GetCorporationsCorporationIdKillmailsRecentOpts) ([]GetCorporationsCorporationIdKillmailsRecent200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetCorporationsCorporationIdKillmailsRecent200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetCorporationsCorporationIdKillmailsRecent200OkList
 	)
 
 	// create path and map variables
@@ -315,7 +315,7 @@ func (a *KillmailsApiService) GetCorporationsCorporationIdKillmailsRecent(ctx co
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -331,8 +331,8 @@ func (a *KillmailsApiService) GetCorporationsCorporationIdKillmailsRecent(ctx co
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -443,17 +443,17 @@ Return a single killmail from its ID and hash  ---  This route is cached for up 
 */
 
 type GetKillmailsKillmailIdKillmailHashOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *KillmailsApiService) GetKillmailsKillmailIdKillmailHash(ctx context.Context, killmailHash string, killmailId int32, localVarOptionals *GetKillmailsKillmailIdKillmailHashOpts) (GetKillmailsKillmailIdKillmailHashOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetKillmailsKillmailIdKillmailHashOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetKillmailsKillmailIdKillmailHashOk
 	)
 
 	// create path and map variables
@@ -498,7 +498,7 @@ func (a *KillmailsApiService) GetKillmailsKillmailIdKillmailHash(ctx context.Con
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -514,8 +514,8 @@ func (a *KillmailsApiService) GetKillmailsKillmailIdKillmailHash(ctx context.Con
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

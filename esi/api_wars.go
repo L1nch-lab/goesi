@@ -54,18 +54,18 @@ Return a list of wars  ---  This route is cached for up to 3600 seconds
 */
 
 type GetWarsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	MaxWarId    optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	MaxWarId	optional.Int32
 }
 
 func (a *WarsApiService) GetWars(ctx context.Context, localVarOptionals *GetWarsOpts) ([]int32, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue []int32
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	[]int32
 	)
 
 	// create path and map variables
@@ -111,7 +111,7 @@ func (a *WarsApiService) GetWars(ctx context.Context, localVarOptionals *GetWars
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -127,8 +127,8 @@ func (a *WarsApiService) GetWars(ctx context.Context, localVarOptionals *GetWars
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -216,17 +216,17 @@ Return details about a war  ---  This route is cached for up to 3600 seconds
 */
 
 type GetWarsWarIdOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
+	Datasource	optional.String
+	IfNoneMatch	optional.String
 }
 
 func (a *WarsApiService) GetWarsWarId(ctx context.Context, warId int32, localVarOptionals *GetWarsWarIdOpts) (GetWarsWarIdOk, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetWarsWarIdOk
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetWarsWarIdOk
 	)
 
 	// create path and map variables
@@ -273,7 +273,7 @@ func (a *WarsApiService) GetWarsWarId(ctx context.Context, warId int32, localVar
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -289,8 +289,8 @@ func (a *WarsApiService) GetWarsWarId(ctx context.Context, warId int32, localVar
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -390,18 +390,18 @@ Return a list of kills related to a war  ---  This route is cached for up to 360
 */
 
 type GetWarsWarIdKillmailsOpts struct {
-	Datasource  optional.String
-	IfNoneMatch optional.String
-	Page        optional.Int32
+	Datasource	optional.String
+	IfNoneMatch	optional.String
+	Page		optional.Int32
 }
 
 func (a *WarsApiService) GetWarsWarIdKillmails(ctx context.Context, warId int32, localVarOptionals *GetWarsWarIdKillmailsOpts) ([]GetWarsWarIdKillmails200Ok, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue GetWarsWarIdKillmails200OkList
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	GetWarsWarIdKillmails200OkList
 	)
 
 	// create path and map variables
@@ -451,7 +451,7 @@ func (a *WarsApiService) GetWarsWarIdKillmails(ctx context.Context, warId int32,
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -467,8 +467,8 @@ func (a *WarsApiService) GetWarsWarIdKillmails(ctx context.Context, warId int32,
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {

@@ -52,18 +52,18 @@ The _dev ESI swagger specification. The underscore swagger specs do not have a b
 */
 
 type GetDevSwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetDevSwagger(ctx context.Context, localVarOptionals *GetDevSwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -109,7 +109,7 @@ func (a *SwaggerApiService) GetDevSwagger(ctx context.Context, localVarOptionals
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -125,8 +125,8 @@ func (a *SwaggerApiService) GetDevSwagger(ctx context.Context, localVarOptionals
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -159,18 +159,18 @@ The dev ESI swagger specification.
 */
 
 type GetDevSwagger_1Opts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetDevSwagger_1(ctx context.Context, localVarOptionals *GetDevSwagger_1Opts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -216,7 +216,7 @@ func (a *SwaggerApiService) GetDevSwagger_1(ctx context.Context, localVarOptiona
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -232,8 +232,8 @@ func (a *SwaggerApiService) GetDevSwagger_1(ctx context.Context, localVarOptiona
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -266,18 +266,18 @@ The _latest ESI swagger specification. The underscore swagger specs do not have 
 */
 
 type GetLatestSwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetLatestSwagger(ctx context.Context, localVarOptionals *GetLatestSwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -323,7 +323,7 @@ func (a *SwaggerApiService) GetLatestSwagger(ctx context.Context, localVarOption
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -339,8 +339,8 @@ func (a *SwaggerApiService) GetLatestSwagger(ctx context.Context, localVarOption
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -373,18 +373,18 @@ The latest ESI swagger specification.
 */
 
 type GetLatestSwagger_2Opts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetLatestSwagger_2(ctx context.Context, localVarOptionals *GetLatestSwagger_2Opts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -430,7 +430,7 @@ func (a *SwaggerApiService) GetLatestSwagger_2(ctx context.Context, localVarOpti
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -446,8 +446,8 @@ func (a *SwaggerApiService) GetLatestSwagger_2(ctx context.Context, localVarOpti
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -480,18 +480,18 @@ The _legacy ESI swagger specification. The underscore swagger specs do not have 
 */
 
 type GetLegacySwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetLegacySwagger(ctx context.Context, localVarOptionals *GetLegacySwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -537,7 +537,7 @@ func (a *SwaggerApiService) GetLegacySwagger(ctx context.Context, localVarOption
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -553,8 +553,8 @@ func (a *SwaggerApiService) GetLegacySwagger(ctx context.Context, localVarOption
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -587,18 +587,18 @@ The legacy ESI swagger specification.
 */
 
 type GetLegacySwagger_3Opts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetLegacySwagger_3(ctx context.Context, localVarOptionals *GetLegacySwagger_3Opts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -644,7 +644,7 @@ func (a *SwaggerApiService) GetLegacySwagger_3(ctx context.Context, localVarOpti
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -660,8 +660,8 @@ func (a *SwaggerApiService) GetLegacySwagger_3(ctx context.Context, localVarOpti
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -694,18 +694,18 @@ The meta ESI swagger specification.
 */
 
 type GetMetaSwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetMetaSwagger(ctx context.Context, localVarOptionals *GetMetaSwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -751,7 +751,7 @@ func (a *SwaggerApiService) GetMetaSwagger(ctx context.Context, localVarOptional
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -767,8 +767,8 @@ func (a *SwaggerApiService) GetMetaSwagger(ctx context.Context, localVarOptional
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -801,18 +801,18 @@ The v1 ESI swagger specification.
 */
 
 type GetV1SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV1Swagger(ctx context.Context, localVarOptionals *GetV1SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -858,7 +858,7 @@ func (a *SwaggerApiService) GetV1Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -874,8 +874,8 @@ func (a *SwaggerApiService) GetV1Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -908,18 +908,18 @@ The v2 ESI swagger specification.
 */
 
 type GetV2SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV2Swagger(ctx context.Context, localVarOptionals *GetV2SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -965,7 +965,7 @@ func (a *SwaggerApiService) GetV2Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -981,8 +981,8 @@ func (a *SwaggerApiService) GetV2Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1015,18 +1015,18 @@ The v3 ESI swagger specification.
 */
 
 type GetV3SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV3Swagger(ctx context.Context, localVarOptionals *GetV3SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -1072,7 +1072,7 @@ func (a *SwaggerApiService) GetV3Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1088,8 +1088,8 @@ func (a *SwaggerApiService) GetV3Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1122,18 +1122,18 @@ The v4 ESI swagger specification.
 */
 
 type GetV4SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV4Swagger(ctx context.Context, localVarOptionals *GetV4SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -1179,7 +1179,7 @@ func (a *SwaggerApiService) GetV4Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1195,8 +1195,8 @@ func (a *SwaggerApiService) GetV4Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1229,18 +1229,18 @@ The v5 ESI swagger specification.
 */
 
 type GetV5SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV5Swagger(ctx context.Context, localVarOptionals *GetV5SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -1286,7 +1286,7 @@ func (a *SwaggerApiService) GetV5Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1302,8 +1302,8 @@ func (a *SwaggerApiService) GetV5Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
@@ -1336,18 +1336,18 @@ The v6 ESI swagger specification.
 */
 
 type GetV6SwaggerOpts struct {
-	UserAgent  optional.String
-	XUserAgent optional.String
-	Datasource optional.String
+	UserAgent	optional.String
+	XUserAgent	optional.String
+	Datasource	optional.String
 }
 
 func (a *SwaggerApiService) GetV6Swagger(ctx context.Context, localVarOptionals *GetV6SwaggerOpts) (interface{}, *http.Response, error) {
 	var (
-		localVarHttpMethod  = strings.ToUpper("Get")
-		localVarPostBody    interface{}
-		localVarFileName    string
-		localVarFileBytes   []byte
-		localVarReturnValue interface{}
+		localVarHttpMethod	= strings.ToUpper("Get")
+		localVarPostBody	interface{}
+		localVarFileName	string
+		localVarFileBytes	[]byte
+		localVarReturnValue	interface{}
 	)
 
 	// create path and map variables
@@ -1393,7 +1393,7 @@ func (a *SwaggerApiService) GetV6Swagger(ctx context.Context, localVarOptionals 
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHttpResponse.Body)
 	localVarHttpResponse.Body.Close()
 	if err != nil {
 		return localVarReturnValue, localVarHttpResponse, err
@@ -1409,8 +1409,8 @@ func (a *SwaggerApiService) GetV6Swagger(ctx context.Context, localVarOptionals 
 
 	if localVarHttpResponse.StatusCode >= 400 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:	localVarBody,
+			error:	localVarHttpResponse.Status,
 		}
 
 		if localVarHttpResponse.StatusCode == 200 {
