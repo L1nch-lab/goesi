@@ -15,7 +15,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.22
+          go-version: 1.23
 
       - name: Install dependencies
         run: go mod tidy
@@ -23,8 +23,6 @@ jobs:
       - name: Build binary
         run: go build -o goesi
 
-      - name: Package tools
-        run: zip -r tools.zip tools/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

@@ -1,30 +1,36 @@
-# golangci.yml – GolangCI-Lint configuration for L1nch-lab/goesi
+# golangci.yml – GolangCI-Lint configuration
 
 run:
   timeout: 5m
   skip-dirs:
-    - tools  # Skip internal developer tools
+      - fixtool
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - errcheck
+
   tests: true
 
 linters:
   enable:
-    - errcheck           # Check that errors are not ignored
-    - gosimple           # Simplify Go code
-    - govet              # Go's vet tool
-    - staticcheck        # Heuristic-based analyzer (very useful)
-    - unused             # Detect unused variables/functions
-    - ineffassign        # Detect ineffectual assignments
-    - typecheck          # Detect type errors
-    - deadcode           # Find unused code
-    - structcheck        # Find unused struct fields
-    - varcheck           # Find unused global variables and constants
-    - goimports          # Checks import grouping and formatting
-    - gocritic           # Collection of useful diagnostics
-    - revive             # Fast, configurable, extensible linter
+    - errcheck
+    - gosimple
+    - govet
+    - staticcheck
+    - unused
+    - ineffassign
+    - typecheck
+    - deadcode
+    - structcheck
+    - varcheck
+    - goimports
+    - gocritic
+    - revive
+    - asasalint
   disable:
-    - scopelint          # Deprecated and merged into other linters
-    - lll                # Line length – not critical here
-    - funlen             # Method length – stylistic only
+    - scopelint
+    - lll
+    - funlen
 
 linters-settings:
   goimports:
@@ -45,6 +51,6 @@ linters-settings:
 issues:
   exclude-use-default: false
   exclude:
-    - "Error return value of .* is not checked"       # Sometimes acceptable in tool code
-    - "should not end with punctuation or newlines"   # Style rule – skip for now
-    - "field .* is unused"                            # Can be intentional during refactoring
+    - "Error return value of .* is not checked"
+    - "should not end with punctuation or newlines"
+    - "field .* is unused"
